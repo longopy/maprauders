@@ -11,7 +11,6 @@ import Projection from "ol/proj/Projection.js";
 import Static from "ol/source/ImageStatic.js";
 import View from "ol/View.js";
 import { getCenter } from "ol/extent.js";
-import { none } from "ol/centerconstraint";
 
 // Map views always need a projection.  Here we just want to map image
 // coordinates directly to map coordinates, so we create a projection that uses
@@ -105,7 +104,6 @@ map.on("click", function (evt) {
     return;
   }
   popup.setPosition(evt.coordinate);
-  console.log(this)
   popover = new bootstrap.Popover(element, {
     container: element,
     animation: true,

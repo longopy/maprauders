@@ -24,6 +24,7 @@ const projection = new Projection({
 
 const imageMapLayer = new ImageLayer({
   source: new Static({
+    attributions: 'Made with ❤️ by <a href="https://twitch.tv/longopy">longopy</a>',
     url: "https://imgs.xkcd.com/comics/online_communities.png",
     projection: projection,
     imageExtent: extent,
@@ -32,9 +33,8 @@ const imageMapLayer = new ImageLayer({
 
 const iconFeature = new Feature({
   geometry: new Point([300, 300]),
-  name: "Null Island",
-  population: 4000,
-  rainfall: 500,
+  name: "Hidden Stash 1",
+  tag: 'hidden_stash'
 });
 
 const iconStyle = new Style({
@@ -109,7 +109,7 @@ map.on("click", function (evt) {
     animation: true,
     placement: "top",
     html: true,
-    content: feature.get("name"),
+    content: `Tag: ${feature.get('tag')}, Name: ${feature.get('name')}`,
   });
   popover.show();
 });

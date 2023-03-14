@@ -1,13 +1,19 @@
 {
-    "name": "static-image",
+    "name": "marauders-interactive-maps",
     "dependencies": {
-      "ol": "7.3.0"
+        "@popperjs/core": "^2.11.6",
+        "bootstrap": "^5.2.3",
+        "elm-pep": "^1.0.6",
+        "jquery": "^3.6.4",
+        "ol": "7.3.0"
     },
     "devDependencies": {
-      "vite": "^3.2.3"
+        "sass": "^1.59.2",
+        "vite": "^3.2.3",
+        "vite-plugin-favicons-inject": "^2.2.0"
     },
     "scripts": {
-      "start": "vite",
-      "build": "vite build"
+        "start": "vite",
+        "build": "vite build"
     }
-  }
+}

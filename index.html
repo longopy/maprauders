@@ -1,48 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marauders Interactive Maps</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Marauders Interactive Maps</title>
-  <link rel="stylesheet" href="assets/dist/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/dist/ol/css/ol.css">
-  <style>
-    html,
-    body {
-      margin: 0;
-      height: 100%;
-    }
-
-    .map {
-      width: 100%;
-      height: 100%;
-    }
-
-    .card {
-      border: 0;
-      width: 350px;
-      height: 350px;
-    }
-
-    .popover-body {
-      padding: 0
-    }
-
-    .popup-name {
-      margin-bottom: 0;
-      padding: 10px !important;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="map" class="map"></div>
-  <div id="popup" class="popup"></div>
-  <script src="assets/dist/elm-pep/js/elm-pep.js"></script>
-  <script src="assets/dist/popper/js/popper.min.js"></script>
-  <script src="assets/dist/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/dist/ol/js/ol.js"></script>
-  <script type="module" src="main.js"></script>
-</body>
-
+  <body>
+    <div id="map" class="map"></div>
+    <div id="popup-name" class="popup-name"></div>
+    <div id="popup-info" class="popup-info"></div>
+    <div id="modal-img" class="modal modal-img">
+      <span
+        id="modal-img-close"
+        class="modal-img-close close"
+        data-dismiss="modal"
+        role="button"
+        >&times;</span
+      >
+      <img class="modal-content modal-img-fs img-fluid" id="modal-img-fs" />
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>

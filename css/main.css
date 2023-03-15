@@ -21,8 +21,8 @@ body {
   border: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
 }
 
 .popover-body {

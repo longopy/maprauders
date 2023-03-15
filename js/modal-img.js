@@ -1,18 +1,16 @@
-
-// jQuery
 import $ from "jquery";
 
 export default class ModalImg {
   constructor(imgUrl) {
     this.imgUrl = imgUrl;
-    this.updateModalImgSource(imgUrl);
+    this.updateModalImgSource();
     return this;
   }
-  updateModalImgSource(imgUrl) {
+  updateModalImgSource() {
     const modalImg = document.getElementById("modal-img-fs");
-    modalImg.src = imgUrl;
+    modalImg.src = this.imgUrl;
   }
-  loadModal() {
+  prepareModal() {
     this.prepareModalImgToShow();
     this.prepareModalImgToHide();
   }

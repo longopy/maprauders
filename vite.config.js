@@ -3,8 +3,7 @@ import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 export default defineConfig({
   build: {
-    outDir: 'build',
-    chunkSizeWarningLimit: 1600
+    outDir: 'build'
   },
   server: {
     port: 8080,

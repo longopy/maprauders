@@ -2,6 +2,7 @@ import $ from "jquery";
 
 export default class ModalImg {
   constructor(imgUrl) {
+    this.modal = $("#modal-img");
     this.imgUrl = imgUrl;
     this.updateModalImgSource();
     return this;
@@ -15,15 +16,20 @@ export default class ModalImg {
     this.prepareModalImgToHide();
   }
   prepareModalImgToShow() {
+    this.handleModalShow = this.handleModalShow.bind(this);
     const modalImgToggle = document.getElementById("modal-img-toggle");
-    modalImgToggle.onclick = function () {
-      $("#modal-img").show();
-    };
+    modalImgToggle.addEventListener("click", this.handleModalShow);
+  }
+  handleModalShow(e) {
+    this.modal.show();
   }
   prepareModalImgToHide() {
+    this.handleModalHide= this.handleModalHide.bind(this);
     const modalImgClose = document.getElementById("modal-img-close");
-    modalImgClose.onclick = function () {
-      $("#modal-img").hide();
-    };
+    modalImgClose.addEventListener("click", this.handleModalHide);
   }
+  handleModalHide(e) {
+    this.modal.hide();
+  }
+  
 }

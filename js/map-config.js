@@ -31,7 +31,7 @@ export default class MapConfig {
       extent: this.extent,
     });
     this.loadMap();
-    this.checkMapEvents();
+    this.checkEvents()
   }
   loadMap() {
     this.addFeatures();
@@ -57,19 +57,24 @@ export default class MapConfig {
       tags: ["loot", "hidden_stash"],
     });
 
-    const iconStyle = new Style({
-      image: new Icon({
-        anchor: [0.5, 46],
-        anchorOrigin: "bottom-right",
-        anchorXUnits: "fraction",
-        anchorYUnits: "pixels",
-        src: defaultIconUrl,
-        width: 38,
-        height: 38,
-      }),
+    this.iconStyle = new Style({
+      image: this.createIcon(defaultIconUrl, 38, 38),
     });
-    iconFeature.setStyle(iconStyle);
+    this.iconStyleOnHover = new Style({
+      image: this.createIcon(defaultIconUrl, 42, 42)});
+    iconFeature.setStyle(this.iconStyle);
     return iconFeature;
+  }
+  createIcon(src, width, height) {
+    return new Icon({
+      anchor: [0.5, 46],
+      anchorOrigin: "bottom-right",
+      anchorXUnits: "fraction",
+      anchorYUnits: "pixels",
+      src: src,
+      width: width,
+      height: height,
+    });
   }
   addFeatures() {
     const feature = this.createPoint();
@@ -190,8 +195,8 @@ export default class MapConfig {
     const popoverInfoClose = document.getElementById("popover-info-close");
     this.handlePopoverClick = this.handlePopoverClick.bind(this);
     popoverInfoClose.addEventListener("click", this.handlePopoverClick);
-    const modalImg = new ModalImg(feature.get("imgSrc"));
-    modalImg.prepareModal();
+    this.modalImg = new ModalImg(feature.get("imgSrc"));
+    this.modalImg.prepareModal();
   }
   handlePopoverClick(e) {
     this.popoverInfo.hide();
@@ -233,13 +238,27 @@ export default class MapConfig {
       );
       this.disposePopover("Name");
       if (!feature) {
+        this.returnIconStyleCurrentFeature();
         return;
       }
+      this.currentFeature = feature;
+      this.changeIconStyleCurrentFeature();
       const position = feature.getGeometry().getCoordinates();
       this.popupName.setPosition(position);
       this.createPopupName(feature);
   }
+  changeIconStyleCurrentFeature(){
+    if (this.currentFeature!=undefined){
+      this.currentFeature.setStyle(this.iconStyleOnHover)
+    }
+  }
+  returnIconStyleCurrentFeature(){
+    if (this.currentFeature!=undefined){
+      this.currentFeature.setStyle(this.iconStyle)
+    }
+  }
   handleMapMoveStart(e) {
+    this.returnIconStyleCurrentFeature();
     this.disposePopover("Name");
   }
   checkMapEvents() {
@@ -249,5 +268,24 @@ export default class MapConfig {
     this.map.addEventListener("pointermove", this.handleMapPointerMove);
     this.handleMapMoveStart = this.handleMapMoveStart.bind(this);
     this.map.addEventListener("movestart", this.handleMapMoveStart);  
+  }
+  checkEscKey(){
+    this.handleEscKey = this.handleEscKey.bind(this);
+    document.addEventListener('keydown', this.handleEscKey);
+  }
+  handleEscKey(e){
+    if(e.key === 'Escape'){
+      if(this.modalImg.modal.is(':visible')){
+        this.modalImg.modal.hide();
+      }else if (typeof this.popoverInfo !== "undefined"){
+        this.disposePopover('Info');
+        this.enableInteractions();
+      }
+      
+    }
+  }
+  checkEvents(){
+    this.checkMapEvents();
+    this.checkEscKey();
   }
 }

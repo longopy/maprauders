@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marauders Mapas Interactivos</title>
+  </head>
+
+  <body>
+    <div id="map" class="map"></div>
+    <div id="popup-name" class="popup-name"></div>
+    <div id="popup-info" class="popup-info"></div>
+    <div id="modal-img" class="modal modal-img">
+      <span
+        id="modal-img-close"
+        class="modal-img-close close"
+        data-dismiss="modal"
+        role="button"
+        >&times;</span
+      >
+      <img class="modal-content modal-img-fs img-fluid" id="modal-img-fs" />
+    </div>
+    <div id="lang-div" class="dropdown lang-div rounded">
+      <div class="btn-group dropdown-center dropdown p-1">
+        <button
+          class="btn pt-0"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img src="../data/lang/es.svg" width="24" height="18" />
+        </button>
+        <div class="dropdown-menu dropdown-menu-wide">
+          <button class="dropdown-item pt-0" href="#" id="change-language-btn">
+             <img src="../data/lang/us.svg" width="24" height="18" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      localStorage.setItem("lang", "es");
+    </script>
+    <script type="module" src="../js/lang.js"></script>
+    <script type="module" src="../js/spaceport.js"></script>
+  </body>
+</html>

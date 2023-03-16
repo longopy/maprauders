@@ -18,6 +18,7 @@ export default class ModalImg {
   prepareModalImgToShow() {
     this.handleModalShow = this.handleModalShow.bind(this);
     const modalImgToggle = document.getElementById("modal-img-toggle");
+    if (modalImgToggle != null)
     modalImgToggle.addEventListener("click", this.handleModalShow);
   }
   handleModalShow(e) {

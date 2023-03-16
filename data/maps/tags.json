@@ -1,0 +1,16 @@
+[
+    {
+        "id": "loot",
+        "name":{
+            "en": "Loot",
+            "es": "Botín"
+        }
+    },
+    {
+        "id": "hidden_stash",
+        "name":{
+            "en": "Hidden Stash",
+            "es": "Alijo oculto"
+        }
+    }
+]

@@ -1,11 +1,17 @@
+// Styles
+import "../dist/bootstrap/bootstrap.min.css";
+import "../dist/ol/ol.css";
+import "../css/modal-img.css";
+import "../css/main.css";
+
+// elm-pep
+import "elm-pep";
+
 // Bootstrap
 import * as bootstrap from "bootstrap";
 
 // Modal Image
 import ModalImg from "./modal-img.js";
-
-// Data
-import defaultIconUrl from "../data/icons/default.svg";
 
 // OpenLayers
 import Feature from "ol/Feature.js";
@@ -23,18 +29,21 @@ import View from "ol/View.js";
 import { getCenter } from "ol/extent.js";
 
 export default class MapConfig {
-  constructor() {
+  constructor(points, labels, attributions) {
+    this.points = points;
+    this.labels = labels;
+    this.attributions = attributions;
     this.extent = [0, 0, 1024, 968]; // Pixels
     this.projection = new Projection({
       code: "xkcd-image",
       units: "pixels",
       extent: this.extent,
     });
+    this.addPoints();
     this.loadMap();
-    this.checkEvents()
+    this.checkEvents();
   }
   loadMap() {
-    this.addFeatures();
     this.map = new Map({
       layers: this.loadLayers(),
       target: document.getElementById("map"),
@@ -44,31 +53,31 @@ export default class MapConfig {
         zoom: 1.75,
         minZoom: 1.75,
         maxZoom: 4,
-      }),
+      })
     });
     this.loadPopups();
   }
-  createPoint() {
+  createPoint(point) {
     const iconFeature = new Feature({
-      geometry: new Point([487.6332462267761, 502.8370584449619]),
-      imgSrc:
-        "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-      name: "Hidden Stash Stairs",
-      tags: ["loot", "hidden_stash"],
+      geometry: new Point(point["position"]),
+      imgSrc: point["imgSrc"] || undefined,
+      name: point["name"],
+      mainTag: point["mainTag"],
+      tags: point["tags"],
     });
-
+    const iconSrc = `../data/icons/${point["iconName"]}.svg`; 
     this.iconStyle = new Style({
-      image: this.createIcon(defaultIconUrl, 38, 38),
+      image: this.createIcon(iconSrc, 45, 45),
     });
     this.iconStyleOnHover = new Style({
-      image: this.createIcon(defaultIconUrl, 42, 42)});
+      image: this.createIcon(iconSrc, 65, 65),
+    });
     iconFeature.setStyle(this.iconStyle);
     return iconFeature;
   }
   createIcon(src, width, height) {
     return new Icon({
-      anchor: [0.5, 46],
-      anchorOrigin: "bottom-right",
+      anchor: [0.5, 65],
       anchorXUnits: "fraction",
       anchorYUnits: "pixels",
       src: src,
@@ -76,13 +85,16 @@ export default class MapConfig {
       height: height,
     });
   }
-  addFeatures() {
-    const feature = this.createPoint();
-    this.features = [feature];
+  addPoints() {
+    const points = this.points;
+    this.points = [];
+    points.forEach((point) => {
+      this.points.push(this.createPoint(point));
+    });
   }
   loadVectorLayer() {
     const vectorSource = new VectorSource({
-      features: this.features,
+      features: this.points,
     });
     this.vectorLayer = new VectorLayer({
       source: vectorSource,
@@ -92,8 +104,7 @@ export default class MapConfig {
   loadImageMapLayer() {
     this.imageMapLayer = new ImageLayer({
       source: new Static({
-        attributions:
-          'Made with ❤️ by <a href="https://twitch.tv/longopy" target="_blank">longopy</a>',
+        attributions: this.attributions,
         url: "https://imgs.xkcd.com/comics/online_communities.png",
         projection: this.projection,
         imageExtent: this.extent,
@@ -142,12 +153,14 @@ export default class MapConfig {
       i.setActive(false);
     });
     document.getElementsByClassName("ol-zoom")[0].style.display = "none";
+    document.getElementById("lang-div").style.display = "none";
   }
   enableInteractions() {
     this.map.getInteractions().forEach((i) => {
       i.setActive(true);
     });
     document.getElementsByClassName("ol-zoom")[0].style.display = "block";
+    document.getElementById("lang-div").style.display = "block";
   }
   createPopupName(feature) {
     this.popupName.setPosition(feature.getGeometry().getCoordinates());
@@ -169,27 +182,35 @@ export default class MapConfig {
       animation: true,
       placement: "top",
       html: true,
-      content: `<div class="card">
-      <div class="card-img-header">
-      <div><a href="#" id="popover-info-close" class="close btn-close btn-close-white d-block" data-dismiss="alert"></a></div>
-      <a id="modal-img-toggle" role="button">
-      <img
-        class="card-img-top img-fluid w-100"
-        src="${feature.get("imgSrc")}"
-        alt="Card image cap"
-      />
-      </a>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">${feature.get("name")}</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
-        </p>
-      </div>
-    </div>`,
+      content: this.generateInfoCard(feature),
     });
     this.popoverInfo.show();
+  }
+  generateInfoCard(feature) {
+    const imgSrc = feature.get("imgSrc", undefined);
+    const imgContainer = `<a id="modal-img-toggle" role="button">
+    <img
+      class="card-img-top img-fluid w-100"
+      src="${feature.get("imgSrc")}"
+      alt="Card image cap"
+    />
+    </a>`;
+    return (
+      `<div class="card">
+    <div class="card-img-header">
+    <div><a href="#" id="popover-info-close" class="close btn-close btn-close-white d-block" data-dismiss="alert"></a></div>` +
+      (imgSrc != undefined ? imgContainer : "") +
+      `</div>
+    <div class="card-body">
+      <h4 class="card-title">${feature.get("name")}</h4>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up
+        the bulk of the card's content.Some quick example text to build on the card title and make up
+        the bulk of the card's content.
+      </p>
+    </div>
+  </div>`
+    );
   }
   checkPopoverInfoClose(feature) {
     const popoverInfoClose = document.getElementById("popover-info-close");
@@ -227,34 +248,31 @@ export default class MapConfig {
     this.checkPopoverInfoClose(feature);
   }
   handleMapPointerMove(e) {
-      const pixel = this.map.getEventPixel(e.originalEvent);
-      const hit = this.map.hasFeatureAtPixel(pixel);
-      this.map.getTarget().style.cursor = hit ? "pointer" : "";
-      const feature = this.map.forEachFeatureAtPixel(
-        e.pixel,
-        function (feature) {
-          return feature;
-        }
-      );
-      this.disposePopover("Name");
-      if (!feature) {
-        this.returnIconStyleCurrentFeature();
-        return;
-      }
-      this.currentFeature = feature;
-      this.changeIconStyleCurrentFeature();
-      const position = feature.getGeometry().getCoordinates();
-      this.popupName.setPosition(position);
-      this.createPopupName(feature);
+    const pixel = this.map.getEventPixel(e.originalEvent);
+    const hit = this.map.hasFeatureAtPixel(pixel);
+    this.map.getTarget().style.cursor = hit ? "pointer" : "";
+    const feature = this.map.forEachFeatureAtPixel(e.pixel, function (feature) {
+      return feature;
+    });
+    this.disposePopover("Name");
+    if (!feature) {
+      this.returnIconStyleCurrentFeature();
+      return;
+    }
+    this.currentFeature = feature;
+    this.changeIconStyleCurrentFeature();
+    const position = feature.getGeometry().getCoordinates();
+    this.popupName.setPosition(position);
+    this.createPopupName(feature);
   }
-  changeIconStyleCurrentFeature(){
-    if (this.currentFeature!=undefined){
-      this.currentFeature.setStyle(this.iconStyleOnHover)
+  changeIconStyleCurrentFeature() {
+    if (this.currentFeature != undefined) {
+      this.currentFeature.setStyle(this.iconStyleOnHover);
     }
   }
-  returnIconStyleCurrentFeature(){
-    if (this.currentFeature!=undefined){
-      this.currentFeature.setStyle(this.iconStyle)
+  returnIconStyleCurrentFeature() {
+    if (this.currentFeature != undefined) {
+      this.currentFeature.setStyle(this.iconStyle);
     }
   }
   handleMapMoveStart(e) {
@@ -267,24 +285,23 @@ export default class MapConfig {
     this.handleMapPointerMove = this.handleMapPointerMove.bind(this);
     this.map.addEventListener("pointermove", this.handleMapPointerMove);
     this.handleMapMoveStart = this.handleMapMoveStart.bind(this);
-    this.map.addEventListener("movestart", this.handleMapMoveStart);  
+    this.map.addEventListener("movestart", this.handleMapMoveStart);
   }
-  checkEscKey(){
+  checkEscKey() {
     this.handleEscKey = this.handleEscKey.bind(this);
-    document.addEventListener('keydown', this.handleEscKey);
+    document.addEventListener("keydown", this.handleEscKey);
   }
-  handleEscKey(e){
-    if(e.key === 'Escape'){
-      if(this.modalImg.modal.is(':visible')){
+  handleEscKey(e) {
+    if (e.key === "Escape") {
+      if (this.modalImg.modal.is(":visible")) {
         this.modalImg.modal.hide();
-      }else if (typeof this.popoverInfo !== "undefined"){
-        this.disposePopover('Info');
+      } else if (typeof this.popoverInfo !== "undefined") {
+        this.disposePopover("Info");
         this.enableInteractions();
       }
-      
     }
   }
-  checkEvents(){
+  checkEvents() {
     this.checkMapEvents();
     this.checkEscKey();
   }

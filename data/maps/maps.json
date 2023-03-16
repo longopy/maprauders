@@ -1,8 +1,14 @@
 [
   {
-    "folder": "space-port",
-    "name": "Space Port",
-    "imgSrc": "",
-    "description": "example"
+    "folder": "spaceport",
+    "name": {
+      "en": "SpacePort",
+      "es": "Estación Espacial"
+    },
+    "imgSrc": "./img.png",
+    "description": {
+      "en" : "A large spaceport. It used to be a thriving place until it was attacked because of its highly valuable bank vault.",
+      "es": "Un gran puerto espacial. Solía ser un lugar próspero hasta que fue atacado por su valiosa bóveda bancaria."
+    }
   }
 ]

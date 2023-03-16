@@ -243,6 +243,7 @@ export default class MapConfig {
       this.enableInteractions();
       return;
     }
+    this.disposePopover("Info");
     this.createPopupInfo(feature);
     this.disableInteractions();
     this.checkPopoverInfoClose(feature);

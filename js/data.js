@@ -1,5 +1,3 @@
-const icons = import.meta.glob("../data/icons/*.svg", { as: "raw" });
-
 export default class Data {
   constructor() {
     this.lang = this.getLangFromLocalStorage();

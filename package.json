@@ -6,8 +6,7 @@
         "elm-pep": "^1.0.6",
         "jquery": "^3.6.4",
         "ol": "7.3.0",
-        "vite-plugin-favicons-inject": "^2.2.0",
-        "vite-plugin-static-copy": "^0.13.1"
+        "vite-plugin-favicons-inject": "^2.2.0"
     },
     "devDependencies": {
         "sass": "^1.59.2",

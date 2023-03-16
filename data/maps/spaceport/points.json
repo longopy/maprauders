@@ -1,36 +1,24 @@
 [
-	{
-		"name": {
-			"en": "Hidden Stash Stairs",
-			"es": "Alijo Oculto en Escaleras"
-		},
-		"imgSrc":"https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-		"iconName": "hidden_stash",
-		"mainTag":"loot",
-		"tags":[
-			"loot",
-			"hidden_stash"
-		],
-		"position":[
-			487.6332462267761,
-			502.8370584449619
-		]
-	},
-	{
-		"name":{
-			"en": "Hidden Stash Pepe",
-			"es": "Alijo Oculto Pepe"
-		},
-		"imgSrc":"https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-		"iconName": "hidden_stash",
-		"mainTag":"loot",
-		"tags":[
-			"loot",
-			"hidden_stash"
-		],
-		"position":[
-			200,
-			300
-		]
-	}
+  {
+    "name": {
+      "en": "Hidden Stash Stairs",
+      "es": "Alijo Oculto en Escaleras"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "hidden_stash",
+    "mainTag": "loot",
+    "tags": ["loot", "hidden_stash"],
+    "position": [487.6332462267761, 502.8370584449619]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "hidden_stash",
+    "mainTag": "loot",
+    "tags": ["loot", "hidden_stash"],
+    "position": [200, 300]
+  }
 ]

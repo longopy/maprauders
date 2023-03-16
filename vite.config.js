@@ -1,7 +1,6 @@
 import { resolve } from "path";
-import { defineConfig, normalizePath } from 'vite';
+import { defineConfig } from "vite";
 import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   build: {
@@ -19,14 +18,5 @@ export default defineConfig({
     hot: true,
   },
   plugins: [
-    vitePluginFaviconsInject("./favicon.ico"),
-    viteStaticCopy({
-      targets: [
-        {
-          src: normalizePath(resolve(__dirname, "./data") + '/[!.]*'),
-          dest: "./data",
-        },
-      ],
-    }),
-  ],
+    vitePluginFaviconsInject("./favicon.ico")],
 });

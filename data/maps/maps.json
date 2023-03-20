@@ -5,7 +5,9 @@
       "en": "SpacePort",
       "es": "Estación Espacial"
     },
-    "imgSrc": "./img.png",
+    "cardImgSrc": "cardImg.png",
+    "mapImgSrc": "mapImg.png",
+    "resolution": [1024, 968],
     "description": {
       "en" : "A large spaceport. It used to be a thriving place until it was attacked because of its highly valuable bank vault.",
       "es": "Un gran puerto espacial. Solía ser un lugar próspero hasta que fue atacado por su valiosa bóveda bancaria."

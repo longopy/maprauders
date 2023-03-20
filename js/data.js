@@ -1,5 +1,9 @@
 export default class Data {
-  constructor() {
+  constructor(mapInfo, mapPoints, attributions) {
+    this.mapInfo = mapInfo;
+    this.rootPath = `../data/maps/${this.mapInfo["folder"]}/`;
+    this.mapPoints = mapPoints;
+    this.attributions = attributions;
     this.lang = this.getLangFromLocalStorage();
   }
   getLangFromLocalStorage() {
@@ -11,10 +15,16 @@ export default class Data {
     });
     return features;
   }
-  getAttributionsByLang(attributions) {
-    return attributions[this.lang];
+  getAttributionsByLang() {
+    return this.attributions[this.lang];
   }
-  getPoints(pointsData) {
-    return this.getFeaturesByLang(pointsData);
+  getPoints() {
+    return this.getFeaturesByLang(this.mapPoints);
+  }
+  getMapImgSrc() {
+    return this.rootPath + this.mapInfo["mapImgSrc"]
+  }
+  getResolution() {
+    return this.mapInfo["resolution"]
   }
 }

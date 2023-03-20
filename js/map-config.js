@@ -29,11 +29,14 @@ import View from "ol/View.js";
 import { getCenter } from "ol/extent.js";
 
 export default class MapConfig {
-  constructor(points, labels, attributions) {
+  constructor(mapImgSrc, resolution, points, labels, attributions) {
     this.points = points;
     this.labels = labels;
     this.attributions = attributions;
-    this.extent = [0, 0, 1024, 968]; // Pixels
+    this.mapImgSrc = mapImgSrc;
+    this.resolution = resolution;
+    this.extent = [0, 0];
+    this.extent = this.extent.concat(this.resolution); // Pixels
     this.projection = new Projection({
       code: "xkcd-image",
       units: "pixels",
@@ -105,7 +108,7 @@ export default class MapConfig {
     this.imageMapLayer = new ImageLayer({
       source: new Static({
         attributions: this.attributions,
-        url: "https://imgs.xkcd.com/comics/online_communities.png",
+        url: this.mapImgSrc,
         projection: this.projection,
         imageExtent: this.extent,
       }),

@@ -4,6 +4,9 @@ import "../dist/ol/ol.css";
 import "../css/modal-img.css";
 import "../css/main.css";
 
+// tag-selector
+import "../js/tag-selector";
+
 // elm-pep
 import "elm-pep";
 
@@ -56,7 +59,7 @@ export default class MapConfig {
         zoom: 1.75,
         minZoom: 1.75,
         maxZoom: 4,
-      })
+      }),
     });
     this.loadPopups();
   }
@@ -68,7 +71,7 @@ export default class MapConfig {
       mainTag: point["mainTag"],
       tags: point["tags"],
     });
-    const iconSrc = `../data/icons/${point["iconName"]}.svg`; 
+    const iconSrc = `../data/icons/points/${point["iconName"]}.svg`;
     this.iconStyle = new Style({
       image: this.createIcon(iconSrc, 45, 45),
     });
@@ -115,21 +118,8 @@ export default class MapConfig {
     });
     return this.imageMapLayer;
   }
-  loadRasterLayer() {
-    this.rasterLayer = new TileLayer({
-      source: new TileJSON({
-        url: "https://a.tiles.mapbox.com/v3/aj.1x1-degrees.json?secure=1",
-        crossOrigin: "",
-      }),
-    });
-    return this.rasterLayer;
-  }
   loadLayers() {
-    return [
-      this.loadImageMapLayer(),
-      this.loadVectorLayer(),
-      this.loadRasterLayer(),
-    ];
+    return [this.loadImageMapLayer(), this.loadVectorLayer()];
   }
   loadPopupNameOverlay() {
     this.popupName = new Overlay({
@@ -157,6 +147,8 @@ export default class MapConfig {
     });
     document.getElementsByClassName("ol-zoom")[0].style.display = "none";
     document.getElementById("lang-div").style.display = "none";
+    document.getElementById("tag-selector-btn").style.display = "none";
+    document.getElementById("tag-selector").style.display = "none";
   }
   enableInteractions() {
     this.map.getInteractions().forEach((i) => {
@@ -164,6 +156,7 @@ export default class MapConfig {
     });
     document.getElementsByClassName("ol-zoom")[0].style.display = "block";
     document.getElementById("lang-div").style.display = "block";
+    document.getElementById("tag-selector-btn").style.display = "block";
   }
   createPopupName(feature) {
     this.popupName.setPosition(feature.getGeometry().getCoordinates());

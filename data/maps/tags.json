@@ -1,16 +1,41 @@
 [
-    {
-        "id": "loot",
-        "name":{
-            "en": "Loot",
-            "es": "Botín"
-        }
+  {
+    "id": "loot",
+    "name": {
+      "en": "Loot",
+      "es": "Botín"
     },
-    {
+    "children": [
+      {
         "id": "hidden_stash",
-        "name":{
-            "en": "Hidden Stash",
-            "es": "Alijo oculto"
+        "name": {
+          "en": "Hidden Stash",
+          "es": "Alijo oculto"
         }
-    }
+      }
+    ]
+  },
+  {
+    "id": "extraction",
+    "name": {
+      "en": "Extraction",
+      "es": "Extracción"
+    },
+    "children": [
+      {
+        "id": "escape_pod",
+        "name": {
+          "en": "Escape Pod",
+          "es": "Cápsula de escape"
+        }
+      },
+      {
+        "id": "air_lock",
+        "name": {
+          "en": "Air Lock",
+          "es": "Exclusa de aire"
+        }
+      }
+    ]
+  }
 ]

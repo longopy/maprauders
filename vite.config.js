@@ -17,6 +17,5 @@ export default defineConfig({
     port: 8080,
     hot: true,
   },
-  plugins: [
-    vitePluginFaviconsInject("./favicon.ico")],
+  plugins: [vitePluginFaviconsInject("./favicon.ico")],
 });

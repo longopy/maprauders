@@ -6,9 +6,29 @@
   </head>
 
   <body>
+    <div id="hud">
+      <button id="tag-selector-btn" class="tag-selector-btn btn rounded p-3">
+        <img class="logo" src="../data/icons/tags.svg" width="26" height="26" />
+      </button>
+      <div id="tag-selector" class="tag-selector rounded"></div>
+      <div id="lang-div" class="dropdown lang-div rounded">
+        <div class="btn-group dropdown-center dropdown p-1">
+          <button
+            class="btn pt-0 lang-btn"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="../data/lang/es.svg" width="24" height="18" />
+          </button>
+          <div class="dropdown-menu dropdown-menu-wide">
+            <button class="dropdown-item pt-0" href="#" id="change-language-btn">
+              <img src="../data/lang/us.svg" width="24" height="18" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="map" class="map"></div>
-    <button id="tag-selector-btn" class="tag-selector-btn btn rounded p-3"><img class='logo' src='../data/icons/tags.svg' width='26' height='26'></button>
-    <div id="tag-selector" class="tag-selector rounded"></div>
     <div id="popup-name" class="popup-name"></div>
     <div id="popup-info" class="popup-info"></div>
     <div id="modal-img" class="modal modal-img">
@@ -20,23 +40,6 @@
         >&times;</span
       >
       <img class="modal-content modal-img-fs img-fluid" id="modal-img-fs" />
-    </div>
-    <div id="lang-div" class="dropdown lang-div rounded">
-      <div class="btn-group dropdown-center dropdown p-1">
-        <button
-          class="btn pt-0 lang-btn"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img src="../data/lang/es.svg" width="24" height="18" />
-        </button>
-        <div class="dropdown-menu dropdown-menu-wide">
-          <button class="dropdown-item pt-0" href="#" id="change-language-btn">
-             <img src="../data/lang/us.svg" width="24" height="18" />
-          </button>
-        </div>
-      </div>
     </div>
     <script>
       localStorage.setItem("lang", "es");

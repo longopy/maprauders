@@ -140,26 +140,26 @@ a {
   text-transform: uppercase;
 }
 
-.tag-btn-selected, .tag-btn-selected:hover {
+.tag-btn.selected, .tag-btn.selected:hover {
   color: var(--text-color);
   background-color: var(--btn-color);
   border-color: var(--btn-color);
 }
 
-.tag-btn-unselected, .tag-btn-unselected:hover {
+.tag-btn.unselected, .tag-btn.unselected:hover {
   color: var(--btn-disabled-tag-btn-color);
   background-color: transparent;
   background-image: none;
   border-color: var(--btn-disabled-tag-btn-color);
 }
 
-.tag-child-btn-selected, .tag-child-btn-selected:hover {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  border-color: var(--text-color);
+.tag-child-btn.selected, .tag-child-btn.selected:hover {
+  color: var(--text-color);
+  background-color: var(--body-background-color);
+  border-color: var(--body-background-color);
 }
 
-.tag-child-btn-unselected, .tag-child-btn-unselected:hover {
+.tag-child-btn.unselected, .tag-child-btn.unselected:hover {
   color: var(--btn-disabled-tag-child-btn-color);;
   background-color: transparent;
   background-image: none;

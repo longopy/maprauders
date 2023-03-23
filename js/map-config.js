@@ -10,6 +10,9 @@ import "../js/tag-selector";
 // elm-pep
 import "elm-pep";
 
+// jquery
+import $ from "jquery";
+
 // Bootstrap
 import * as bootstrap from "bootstrap";
 
@@ -45,8 +48,8 @@ export default class MapConfig {
       units: "pixels",
       extent: this.extent,
     });
-    this.addPoints();
     this.loadMap();
+    this.currentPoints = this.addPoints();
     this.checkEvents();
   }
   loadMap() {
@@ -68,8 +71,8 @@ export default class MapConfig {
       geometry: new Point(point["position"]),
       imgSrc: point["imgSrc"] || undefined,
       name: point["name"],
-      mainTag: point["mainTag"],
-      tags: point["tags"],
+      category: point["category"],
+      tag: point["tag"],
     });
     const iconSrc = `../data/icons/points/${point["iconName"]}.svg`;
     this.iconStyle = new Style({
@@ -97,13 +100,23 @@ export default class MapConfig {
     points.forEach((point) => {
       this.points.push(this.createPoint(point));
     });
+    this.addFeatures(this.points);
+    return this.points;
+  }
+  addFeatures(features) {
+    features.forEach((feature) => {
+      this.vectorSource.addFeature(feature);
+    });
+  }
+  removeFeatures(features) {
+    features.forEach((feature) => {
+      this.vectorSource.removeFeature(feature);
+    });
   }
   loadVectorLayer() {
-    const vectorSource = new VectorSource({
-      features: this.points,
-    });
+    this.vectorSource = new VectorSource();
     this.vectorLayer = new VectorLayer({
-      source: vectorSource,
+      source: this.vectorSource,
     });
     return this.vectorLayer;
   }
@@ -146,17 +159,14 @@ export default class MapConfig {
       i.setActive(false);
     });
     document.getElementsByClassName("ol-zoom")[0].style.display = "none";
-    document.getElementById("lang-div").style.display = "none";
-    document.getElementById("tag-selector-btn").style.display = "none";
-    document.getElementById("tag-selector").style.display = "none";
+    document.getElementById("hud").style.display = "none";
   }
   enableInteractions() {
     this.map.getInteractions().forEach((i) => {
       i.setActive(true);
     });
     document.getElementsByClassName("ol-zoom")[0].style.display = "block";
-    document.getElementById("lang-div").style.display = "block";
-    document.getElementById("tag-selector-btn").style.display = "block";
+    document.getElementById("hud").style.display = "block";
   }
   createPopupName(feature) {
     this.popupName.setPosition(feature.getGeometry().getCoordinates());
@@ -298,8 +308,44 @@ export default class MapConfig {
       }
     }
   }
+  checkTagEvents() {
+    this.handleTagClick = this.handleTagClick.bind(this);
+    const tagBtns = document.querySelectorAll(".tag-btn");
+    tagBtns.forEach((tagBtn) => {
+      tagBtn.addEventListener("click", this.handleTagClick);
+    });
+    this.handleTagChildClick = this.handleTagChildClick.bind(this);
+    const tagChildBtns = document.querySelectorAll(".tag-child-btn");
+    tagChildBtns.forEach((tagBtn) => {
+      tagBtn.addEventListener("click", this.handleTagChildClick);
+    });
+  }
+  handleTagClick(e) {
+    const activate = e.target.className.includes("unselected");
+    this.currentPoints = this.points.filter((point) => {
+      return point.values_.category==e.target.value;
+    });
+    if (activate) {
+      this.removeFeatures(this.currentPoints);
+      this.addFeatures(this.currentPoints);
+    } else {
+      this.removeFeatures(this.currentPoints);
+    }
+  }
+  handleTagChildClick(e) {
+    const activate = e.target.className.includes("unselected");
+    this.currentPoints = this.points.filter((point) => {
+      return point.values_.tag==e.target.value;
+    });
+    if (activate) {
+      this.addFeatures(this.currentPoints);
+    } else {
+      this.removeFeatures(this.currentPoints);
+    }
+  }
   checkEvents() {
     this.checkMapEvents();
     this.checkEscKey();
+    this.checkTagEvents();
   }
 }

@@ -4,6 +4,10 @@ $("#tag-selector-btn").on("click", function () {
   $("#tag-selector").toggle();
 });
 
+$("#attributions-btn").on("click", function () {
+  $("#attributions-info").toggle();
+});
+
 $(function () {
   $(".tag-btn").on("click", function () {
     const children = $(this).parent().parent().parent().parent().find("tbody").find("tr").children().children()

@@ -35,10 +35,9 @@ import View from "ol/View.js";
 import { getCenter } from "ol/extent.js";
 
 export default class MapConfig {
-  constructor(mapImgSrc, resolution, points, labels, attributions) {
+  constructor(mapImgSrc, resolution, points, labels) {
     this.points = points;
     this.labels = labels;
-    this.attributions = attributions;
     this.mapImgSrc = mapImgSrc;
     this.resolution = resolution;
     this.extent = [0, 0];
@@ -123,7 +122,6 @@ export default class MapConfig {
   loadImageMapLayer() {
     this.imageMapLayer = new ImageLayer({
       source: new Static({
-        attributions: this.attributions,
         url: this.mapImgSrc,
         projection: this.projection,
         imageExtent: this.extent,
@@ -251,7 +249,6 @@ export default class MapConfig {
     }
     this.disposePopover("Info");
     this.createPopupInfo(feature);
-    this.disableInteractions();
     this.checkPopoverInfoClose(feature);
   }
   handleMapPointerMove(e) {
@@ -284,6 +281,7 @@ export default class MapConfig {
   }
   handleMapMoveStart(e) {
     this.returnIconStyleCurrentFeature();
+    this.disposePopover("Info")
     this.disposePopover("Name");
   }
   checkMapEvents() {

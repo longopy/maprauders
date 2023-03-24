@@ -1,14 +1,14 @@
 import tags from "../data/maps/tags.json";
 
 export default class Data {
-  constructor(mapInfo, mapPoints, attributions) {
+  constructor(mapInfo, mapPoints) {
     this.mapInfo = mapInfo;
     this.tags = tags;
     this.rootPath = `../data/maps/${this.mapInfo["folder"]}/`;
     this.mapPoints = mapPoints;
-    this.attributions = attributions;
     this.lang = this.getLangFromLocalStorage();
     this.loadTags();
+    this.loadAttributions();
   }
   getLangFromLocalStorage() {
     return localStorage.getItem("lang");
@@ -54,6 +54,14 @@ export default class Data {
     const tagSelector = document.getElementById("tag-selector");
     tagSelector.innerHTML = this.generateTagSelector();
   }
+  loadAttributions() {
+    const attributionsInfo = document.getElementById("attributions-info");
+    fetch(`../${this.lang}/attributions.html`)
+    .then(response=>response.text())
+    .then((html)=> {
+      attributionsInfo.innerHTML = html;
+    })
+  }
   generateTagSelector() {
     let selector = "";
     this.tags.forEach((tag) => {
@@ -72,18 +80,18 @@ export default class Data {
       <tr>
         <th scope="col"><button type="button" class="btn selected btn-sm w-100 text-start tag-btn" value="${
           tag["id"]
-        }"><img class="me-1" src="../data/icons/points/${tag["id"]}.svg" width="28">${
-      tag["name"][this.lang]
-    }</button></th>
+        }"><img class="me-2" src="../data/icons/tags/${
+      tag["id"]
+    }.svg" width="20">${tag["name"][this.lang]}</button></th>
       </tr>
     </thead>
     <tbody>`;
     const rows = childrenTags.map((child) => {
       return `<tr><td><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
-      }"><img class="me-1" src="../data/icons/points/${child["id"]}.svg" width="28">${
-        child["name"][this.lang]
-      }</button></td></tr>`;
+      }"><img class="me-2" src="../data/icons/tags/${
+        child["id"]
+      }.svg" width="20">${child["name"][this.lang]}</button></td></tr>`;
     });
     table = table + rows.join("") + `</tbody></table>`;
     return table;

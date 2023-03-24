@@ -13,6 +13,7 @@ export default defineConfig({
       },
     },
   },
+  assetsInclude: ["**/*.html"],
   server: {
     port: 8080,
     hot: true,

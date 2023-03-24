@@ -7,24 +7,62 @@
 
   <body>
     <div id="hud">
-      <button id="tag-selector-btn" class="tag-selector-btn btn rounded p-3">
-        <img class="logo" src="../data/icons/tags.svg" width="26" height="26" />
-      </button>
-      <div id="tag-selector" class="tag-selector rounded"></div>
+      <div id="tag-selector-div">
+        <button id="tag-selector-btn" class="tag-selector-btn btn rounded p-3">
+          <img
+            class="logo"
+            src="../data/icons/tags.svg"
+            width="26"
+            height="26"
+          />
+        </button>
+        <div id="tag-selector" class="tag-selector rounded"></div>
+      </div>
       <div id="lang-div" class="dropdown lang-div rounded">
         <div class="btn-group dropdown-center dropdown p-1">
           <button
             class="btn pt-0 lang-btn"
             type="button"
             data-bs-toggle="dropdown"
-            aria-expanded="false">
+            aria-expanded="false"
+          >
             <img src="../data/lang/us.svg" width="24" height="18" />
           </button>
           <div class="dropdown-menu dropdown-menu-wide">
-            <button class="dropdown-item pt-0" href="#" id="change-language-btn">
+            <button
+              class="dropdown-item pt-0"
+              href="#"
+              id="change-language-btn"
+            >
               <img src="../data/lang/es.svg" width="24" height="18" />
             </button>
           </div>
+        </div>
+      </div>
+      <div id="back-div">
+        <button
+          id="back-btn"
+          onclick="window.location.href='./index.html'"
+          class="back-btn btn rounded p-3"
+        >
+          <img
+            class="logo"
+            src="../data/icons/back.svg"
+            width="26"
+            height="26"
+          />
+        </button>
+      </div>
+      <div id="attributions-div" class="rounded">
+        <button id="attributions-btn" class="btn rounded p-3">
+          <img
+            class="logo"
+            src="../data/icons/info.svg"
+            width="26"
+            height="26"
+          />
+        </button>
+        <div id="attributions-info" class="rounded p-3">
         </div>
       </div>
     </div>

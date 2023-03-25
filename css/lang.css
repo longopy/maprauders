@@ -1,0 +1,19 @@
+.lang-btn,
+.dropdown,
+.dropdown-menu,
+.dropdown-item:hover {
+  background-color: var(--background-color) !important;
+  color: white !important;
+}
+
+.dropdown-menu.dropdown-menu-wide {
+  min-width: 100%;
+  text-align: center;
+}
+
+#lang-div {
+  position: absolute;
+  z-index: 999999;
+  top: 18px;
+  right: 18px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="hud">
+      <div id="tag-selector-div">
+        <button id="tag-selector-btn" class="tag-selector-btn btn rounded p-3">
+          <img
+            class="logo"
+            src="../data/icons/tags.svg"
+            width="26"
+            height="26"
+          />
+        </button>
+        <div id="tag-selector" class="tag-selector rounded"></div>
+      </div>
+      <div id="lang-div" class="dropdown lang-div rounded">
+        <div class="btn-group dropdown-center dropend">
+          <button
+            class="btn lang-btn rounded"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img src="../data/icons/language.svg" width="30" height="24" />
+          </button>
+          <div class="dropdown-menu dropdown-menu-wide p-1">
+            <button
+              class="dropdown-item rounded"
+              href="#"
+              id="change-language-btn"
+            >
+              <img id="lang-btn" width="24" height="18" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="back-div">
+        <button
+          id="back-btn"
+          onclick="window.location.href='./index.html'"
+          class="back-btn btn rounded p-3"
+        >
+          <img
+            class="logo"
+            src="../data/icons/back.svg"
+            width="26"
+            height="26"
+          />
+        </button>
+      </div>
+      <div id="attributions-div" class="rounded">
+        <button id="attributions-btn" class="btn rounded p-3">
+          <img
+            class="logo"
+            src="../data/icons/info.svg"
+            width="26"
+            height="26"
+          />
+        </button>
+        <div id="attributions-info" class="rounded p-3">
+        </div>
+      </div>
+    </div>
+    <div id="map" class="map"></div>
+    <div id="popup-name" class="popup-name"></div>
+    <div id="popup-info" class="popup-info"></div>
+    <div id="modal-img" class="modal modal-img">
+      <span
+        id="modal-img-close"
+        class="modal-img-close close"
+        data-dismiss="modal"
+        role="button"
+        >&times;</span
+      >
+      <img class="modal-content modal-img-fs img-fluid" id="modal-img-fs" />
+    </div>
+    <script type="module" src="../js/lang.js"></script>
+    <script type="module" src="../js/maps/spaceport.js"></script>
+  </body>
+</html>

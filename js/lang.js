@@ -1,5 +1,8 @@
 import $ from 'jquery';
 
+// Styles
+import "../css/lang.css"
+
 function detectLanguage() {
     const lang = localStorage.getItem('lang', 'en')
 }
@@ -17,6 +20,7 @@ function loadTitle(){
         es: 'Mapas Interactivos Marauders'
     }
     document.title = titles[lang]; 
+    document.lang = lang;
 }
 
 function getTheOtherOption(){

@@ -1,17 +1,20 @@
+// Styles
+import "../css/tags.css"
+
 import tags from "../data/maps/tags.json";
 
-export default class Data {
+function getLangFromLocalStorage(){
+  return localStorage.getItem("lang", "en");
+}
+
+ class MapData {
   constructor(mapInfo, mapPoints) {
     this.mapInfo = mapInfo;
     this.tags = tags;
     this.rootPath = `../data/maps/${this.mapInfo["folder"]}/`;
     this.mapPoints = mapPoints;
-    this.lang = this.getLangFromLocalStorage();
+    this.lang = getLangFromLocalStorage();
     this.loadTags();
-    this.loadAttributions();
-  }
-  getLangFromLocalStorage() {
-    return localStorage.getItem("lang");
   }
   getFeaturesByLang(features) {
     features.forEach((feature) => {
@@ -54,14 +57,6 @@ export default class Data {
     const tagSelector = document.getElementById("tag-selector");
     tagSelector.innerHTML = this.generateTagSelector();
   }
-  loadAttributions() {
-    const attributionsInfo = document.getElementById("attributions-info");
-    fetch(`../${this.lang}/attributions.html`)
-    .then(response=>response.text())
-    .then((html)=> {
-      attributionsInfo.innerHTML = html;
-    })
-  }
   generateTagSelector() {
     let selector = "";
     this.tags.forEach((tag) => {
@@ -97,3 +92,30 @@ export default class Data {
     return table;
   }
 }
+
+class AttributionsData{
+  constructor() {
+    this.lang = getLangFromLocalStorage();
+    this.loadAttributions();
+  }
+  loadAttributions() {
+    const attributionsInfo = document.getElementById("attributions-info");
+    fetch(`${this.lang}/attributions.html`)
+    .then(response=>response.text())
+    .then((html)=> {
+      attributionsInfo.innerHTML = html;
+    })
+  }
+}
+
+class MenuData{
+  constructor() {
+    this.loadMenu();
+  }
+  loadMenu() {
+  }
+}
+
+
+
+export {MapData, AttributionsData, MenuData}

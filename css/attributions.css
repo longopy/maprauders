@@ -1,0 +1,21 @@
+#attributions-btn {
+    position: absolute;
+    background-color: var(--background-color);
+    z-index: 9999;
+    bottom: 18px;
+    right: 18px;
+  }
+  
+  #attributions-info {
+    display: none;
+    position: absolute;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    z-index: 9999;
+    bottom: 100px;
+    right: 18px;
+    min-width: 20px;
+    min-height: 100px;
+    animation: fadeIn 0.2s linear;
+    padding: 0 20px 0 20px;
+  }

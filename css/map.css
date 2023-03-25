@@ -1,0 +1,69 @@
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.map .ol-control > button,
+.map .ol-control > button:hover,
+.map .ol-control > button:focus {
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  font-size: 1.75rem;
+}
+
+.map .ol-control {
+  background-color: var(--background-color) !important;
+  color: var(--text-color);
+  margin: 10px;
+}
+
+.map .ol-zoom {
+  top: 70px;
+  left: auto;
+  right: 10px;
+}
+.map .ol-layer {
+  background-color: var(--body-background-color);
+}
+
+.popover-body {
+  padding: 0;
+  color: white;
+}
+
+.popup-name-text {
+  margin-bottom: 0;
+  padding: 10px !important;
+  color: var(--text-color);
+}
+
+.popover {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.custom-popover {
+  --bs-popover-border-color: var(--background-color) !important;
+  --bs-popover-header-bg: var(--background-color) !important;
+  --bs-popover-header-color: var(--text-color) !important;
+  --bs-popover-arrow-border: var(--background-color) !important;
+}
+
+.card-img-header > div {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card-img-header > img {
+  position: relative;
+}
+
+
+.card {
+    border: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 428px;
+    max-height: 421px;
+  }

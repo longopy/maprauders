@@ -1,0 +1,56 @@
+#tag-selector-btn {
+  position: absolute;
+  background-color: var(--background-color);
+  z-index: 9999;
+  top: 100px;
+  left: 18px;
+}
+
+#tag-selector {
+  display: none;
+  position: absolute;
+  background-color: var(--background-color);
+  z-index: 9999;
+  top: 180px;
+  left: 18px;
+  min-width: 170px;
+  animation: fadeIn 0.2s linear;
+  padding: 0 20px 0 20px;
+}
+
+.tag-btn,
+.tag-child-btn {
+  font-family: sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.tag-btn.selected,
+.tag-btn.selected:hover {
+  color: var(--text-color);
+  background-color: var(--btn-color);
+  border-color: var(--btn-color);
+}
+
+.tag-btn.unselected,
+.tag-btn.unselected:hover {
+  color: var(--btn-disabled-tag-btn-color);
+  background-color: transparent;
+  background-image: none;
+  border-color: var(--btn-disabled-tag-btn-color);
+}
+
+.tag-child-btn.selected,
+.tag-child-btn.selected:hover {
+  color: var(--text-color);
+  background-color: var(--body-background-color);
+  border-color: var(--body-background-color);
+}
+
+.tag-child-btn.unselected,
+.tag-child-btn.unselected:hover {
+  color: var(--btn-disabled-tag-child-btn-color);
+  background-color: transparent;
+  background-image: none;
+  border-color: var(--btn-disabled-tag-child-btn-color);
+}

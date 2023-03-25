@@ -4,9 +4,6 @@ import "../dist/ol/ol.css";
 import "../css/modal-img.css";
 import "../css/main.css";
 
-// tag-selector
-import "../js/tag-selector";
-
 // elm-pep
 import "elm-pep";
 
@@ -58,8 +55,8 @@ export default class MapConfig {
       view: new View({
         projection: this.projection,
         center: getCenter(this.extent),
-        zoom: 1.75,
-        minZoom: 1.75,
+        zoom: 1.5,
+        minZoom: 1.5,
         maxZoom: 4,
       }),
     });
@@ -75,10 +72,10 @@ export default class MapConfig {
     });
     const iconSrc = `../data/icons/points/${point["iconName"]}.svg`;
     this.iconStyle = new Style({
-      image: this.createIcon(iconSrc, 45, 45),
+      image: this.createIcon(iconSrc, 32, 45),
     });
     this.iconStyleOnHover = new Style({
-      image: this.createIcon(iconSrc, 65, 65),
+      image: this.createIcon(iconSrc, 46, 65),
     });
     iconFeature.setStyle(this.iconStyle);
     return iconFeature;
@@ -236,7 +233,6 @@ export default class MapConfig {
     }
   }
   handleMapClick(e) {
-    // Copy coordinates to clipboard
     navigator.clipboard.writeText(e.coordinate);
     const feature = this.map.forEachFeatureAtPixel(e.pixel, function (feature) {
       return feature;

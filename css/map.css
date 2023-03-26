@@ -22,9 +22,6 @@
   left: auto;
   right: 10px;
 }
-.map .ol-layer {
-  background-color: var(--body-background-color);
-}
 
 .popover-body {
   padding: 0;

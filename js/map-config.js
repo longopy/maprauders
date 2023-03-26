@@ -191,7 +191,7 @@ export default class MapConfig {
     <img
       class="card-img-top img-fluid w-100"
       src="${feature.get("imgSrc")}"
-      alt="Card image cap"
+      alt="${feature.get("name")}"
     />
     </a>`;
     return (
@@ -203,9 +203,7 @@ export default class MapConfig {
     <div class="card-body">
       <h4 class="card-title">${feature.get("name")}</h4>
       <p class="card-text">
-        Some quick example text to build on the card title and make up
-        the bulk of the card's content.Some quick example text to build on the card title and make up
-        the bulk of the card's content.
+      ${feature.get("description")}
       </p>
     </div>
   </div>`

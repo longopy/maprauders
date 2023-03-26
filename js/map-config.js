@@ -1,14 +1,13 @@
 // Styles
 import "../dist/bootstrap/bootstrap.min.css";
-import "../dist/ol/ol.css";
-import "../css/modal-img.css";
+import "../css/back.css";
 import "../css/main.css";
+import "../css/map.css";
+import "../css/modal-img.css";
+import "../dist/ol/ol.css";
 
 // elm-pep
 import "elm-pep";
-
-// jquery
-import $ from "jquery";
 
 // Bootstrap
 import * as bootstrap from "bootstrap";
@@ -18,18 +17,17 @@ import ModalImg from "./modal-img.js";
 
 // OpenLayers
 import Feature from "ol/Feature.js";
-import Overlay from "ol/Overlay.js";
-import Point from "ol/geom/Point.js";
-import TileJSON from "ol/source/TileJSON.js";
-import VectorSource from "ol/source/Vector.js";
-import { Icon, Style } from "ol/style.js";
-import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer.js";
-import ImageLayer from "ol/layer/Image.js";
 import Map from "ol/Map.js";
-import Projection from "ol/proj/Projection.js";
-import Static from "ol/source/ImageStatic.js";
+import Overlay from "ol/Overlay.js";
 import View from "ol/View.js";
 import { getCenter } from "ol/extent.js";
+import Point from "ol/geom/Point.js";
+import { Vector as VectorLayer } from "ol/layer.js";
+import ImageLayer from "ol/layer/Image.js";
+import Projection from "ol/proj/Projection.js";
+import Static from "ol/source/ImageStatic.js";
+import VectorSource from "ol/source/Vector.js";
+import { Icon, Style } from "ol/style.js";
 
 export default class MapConfig {
   constructor(mapImgSrc, resolution, points, labels) {

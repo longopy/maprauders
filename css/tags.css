@@ -28,8 +28,8 @@
 .tag-btn.selected,
 .tag-btn.selected:hover {
   color: var(--text-color);
-  background-color: var(--btn-color);
-  border-color: var(--btn-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .tag-btn.unselected,

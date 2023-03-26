@@ -1,17 +1,19 @@
 // Styles
-import "../css/tags.css"
+import "../css/tags.css";
 
 import tags from "../data/maps/tags.json";
+import maps from "../data/maps/maps.json";
 
-function getLangFromLocalStorage(){
-  return localStorage.getItem("lang", "en");
+function getLangFromLocalStorage() {
+  if (!localStorage.hasOwnProperty("lang")) return "en";
+  else return localStorage.getItem("lang");
 }
 
- class MapData {
+class MapData {
   constructor(mapInfo, mapPoints) {
     this.mapInfo = mapInfo;
     this.tags = tags;
-    this.rootPath = `../data/maps/${this.mapInfo["folder"]}/`;
+    this.rootPath = `../data/maps/${this.mapInfo["id"]}/`;
     this.mapPoints = mapPoints;
     this.lang = getLangFromLocalStorage();
     this.loadTags();
@@ -93,29 +95,49 @@ function getLangFromLocalStorage(){
   }
 }
 
-class AttributionsData{
+class AttributionsData {
   constructor() {
     this.lang = getLangFromLocalStorage();
     this.loadAttributions();
   }
   loadAttributions() {
     const attributionsInfo = document.getElementById("attributions-info");
-    fetch(`${this.lang}/attributions.html`)
-    .then(response=>response.text())
-    .then((html)=> {
-      attributionsInfo.innerHTML = html;
-    })
+    fetch(`../${this.lang}/attributions.html`)
+      .then((response) => response.text())
+      .then((html) => {
+        attributionsInfo.innerHTML = html;
+      });
   }
 }
 
-class MenuData{
+class MenuData {
   constructor() {
+    this.lang = getLangFromLocalStorage();
     this.loadMenu();
   }
   loadMenu() {
+    const menuContainer = document.getElementById("menu-div");
+    let html = "";
+    maps.forEach((map) => {
+      html += `<div class="col p-3">
+      <button class="btn p-0 rounded" onclick="window.location.href='./maps/${
+        map["id"]
+      }.html'">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./data/maps/${map["id"]}/${
+        map["cardImgSrc"]
+      }" alt="${map["name"][this.lang]}">
+          <div class="card-body">
+            <h5 class="card-title">${map["name"][this.lang]}</h5>
+            <p class="card-text">${map["description"][this.lang]}</p>
+          </div>
+        </div>
+      </button>
+    </div>`;
+    });
+    console.log(html);
+    menuContainer.innerHTML = html;
   }
 }
 
-
-
-export {MapData, AttributionsData, MenuData}
+export { MapData, AttributionsData, MenuData };

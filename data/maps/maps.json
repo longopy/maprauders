@@ -1,8 +1,8 @@
 [
   {
-    "folder": "spaceport",
+    "id": "space-port",
     "name": {
-      "en": "SpacePort",
+      "en": "Space Port",
       "es": "Estación Espacial"
     },
     "cardImgSrc": "cardImg.png",

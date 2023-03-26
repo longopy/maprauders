@@ -5,8 +5,11 @@ import "../css/main.css";
 // Bootstrap
 import * as bootstrap from "bootstrap";
 
-import { AttributionsData } from "./data.js";
+import { AttributionsData, MenuData } from "./data";
 
 // Attributions
 import "../js/attributions";
-const attributionsData = new AttributionsData()
+const attributionsData = new AttributionsData();
+
+// Menu
+const menuData = new MenuData();

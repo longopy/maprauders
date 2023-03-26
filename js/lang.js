@@ -4,7 +4,9 @@ import $ from 'jquery';
 import "../css/lang.css"
 
 function detectLanguage() {
-    const lang = localStorage.getItem('lang', 'en')
+    if (!localStorage.hasOwnProperty('lang')){
+        localStorage.setItem('lang', 'en');
+    }
 }
 
 function loadLangButton() {
@@ -14,7 +16,7 @@ function loadLangButton() {
 }
 
 function loadTitle(){
-    const lang = localStorage.getItem('lang', 'en')
+    const lang = localStorage.getItem('lang')
     const titles ={
         en: 'Marauders Interactive Maps',
         es: 'Mapas Interactivos Marauders'
@@ -24,7 +26,7 @@ function loadTitle(){
 }
 
 function getTheOtherOption(){
-    const lang = localStorage.getItem('lang', 'en')
+    const lang = localStorage.getItem('lang')
     if (lang === 'en') {
         return 'es';
     }else{
@@ -37,7 +39,6 @@ $(function (){
     loadLangButton();
     $('#change-language-btn').on('click', function (e){
         e.preventDefault();
-        console.log(e)
         const lang = getTheOtherOption();
         localStorage.setItem('lang', lang);
         window.location.reload();

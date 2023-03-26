@@ -2,7 +2,7 @@
   --body-background-color: #2d3038;
   --background-color: #0d181b;
   --text-color: white;
-  --btn-color: #9b3838;
+  --accent-color: #9b3838;
   --btn-disabled-tag-btn-color: #742929;
   --btn-disabled-tag-child-btn-color: #787878;
 }
@@ -21,8 +21,28 @@ a {
   text-decoration: none !important;
 }
 a:hover {
-  color: var(--btn-color) !important;
+  color: var(--accent-color) !important;
 }
+
+
+.card-img-header > div {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card-img-header > img {
+  position: relative;
+}
+
+
+.card {
+    border: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 428px;
+    max-height: 421px;
+  }
 
 @keyframes fadeIn {
   0% {

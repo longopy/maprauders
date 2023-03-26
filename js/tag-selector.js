@@ -1,5 +1,8 @@
 import $ from "jquery";
 
+// Styles
+import "../css/tags.css";
+
 $("#tag-selector-btn").on("click", function () {
   $("#tag-selector").toggle();
 });

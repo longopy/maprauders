@@ -7,9 +7,8 @@ export default defineConfig({
     outDir: "build",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        en: resolve(__dirname, "en/index.html"),
-        es: resolve(__dirname, "es/index.html"),
+        main: resolve(__dirname, "./index.html"),
+        space_port: resolve(__dirname, "./maps/space-port.html"),
       },
     },
   },

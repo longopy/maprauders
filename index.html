@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-  </head>
 
-  <body>
-    <div id="hud">
-      <div id="lang-div" class="dropdown lang-div rounded">
-        <div class="btn-group dropdown-center dropend">
-          <button
-            class="btn lang-btn rounded"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img src="./data/icons/language.svg" width="30" height="24" />
-          </button>
-          <div class="dropdown-menu dropdown-menu-wide p-1">
-            <button
-              class="dropdown-item rounded"
-              href="#"
-              id="change-language-btn"
-            >
-              <img id="lang-btn" width="24" height="18" />
-            </button>
-          </div>
-        </div>
-      </div>
-      <div id="attributions-div" class="rounded">
-        <button id="attributions-btn" class="btn rounded p-3">
-          <img
-            class="icon-hover"
-            src="./data/icons/info.svg"
-            width="26"
-            height="26"
-          />
+<head>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="hud">
+    <div id="lang-div" class="dropdown lang-div rounded">
+      <div class="btn-group dropdown-center dropend">
+        <button class="btn lang-btn rounded" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./data/icons/language.svg" width="30" height="24" />
         </button>
-        <div id="attributions-info" class="rounded p-3">
+        <div class="dropdown-menu dropdown-menu-wide p-1">
+          <button class="dropdown-item rounded" href="#" id="change-language-btn">
+            <img id="lang-btn" width="24" height="18" />
+          </button>
         </div>
       </div>
     </div>
-    <script type="module" src="./js/lang.js"></script>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+    <div id="attributions-div" class="rounded">
+      <button id="attributions-btn" class="btn rounded p-3">
+        <img class="icon-hover" src="./data/icons/info.svg" width="26" height="26" />
+      </button>
+      <div id="attributions-info" class="rounded p-3">
+      </div>
+    </div>
+  </div>
+  <div class="h1 text-center mt-5">MARAUDERS INTERACTIVE MAPS</div>
+  <div class="p-5">
+    <div class="container">
+      <div id="menu-div" class="row">
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/lang.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>

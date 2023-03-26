@@ -24,6 +24,10 @@ a:hover {
   color: var(--accent-color) !important;
 }
 
+.accent-color {
+  color: var(--accent-color);
+}
+
 
 .card-img-header > div {
   position: absolute;

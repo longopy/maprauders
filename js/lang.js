@@ -15,16 +15,6 @@ function loadLangButton() {
     langBtn.src=`../data/lang/${lang}.svg`;
 }
 
-function loadTitle(){
-    const lang = localStorage.getItem('lang')
-    const titles ={
-        en: 'Marauders Interactive Maps',
-        es: 'Mapas Interactivos Marauders'
-    }
-    document.title = titles[lang]; 
-    document.lang = lang;
-}
-
 function getTheOtherOption(){
     const lang = localStorage.getItem('lang')
     if (lang === 'en') {
@@ -35,7 +25,6 @@ function getTheOtherOption(){
 }
 $(function (){
     detectLanguage();
-    loadTitle();
     loadLangButton();
     $('#change-language-btn').on('click', function (e){
         e.preventDefault();

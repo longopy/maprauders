@@ -5,10 +5,10 @@ import "../css/main.css";
 // Bootstrap
 import * as bootstrap from "bootstrap";
 
-import { AttributionsData, MenuData } from "./data";
+import { AttributionsData, MenuData } from "./data.js";
 
 // Attributions
-import "../js/attributions";
+import "./attributions.js";
 const attributionsData = new AttributionsData();
 
 // Menu

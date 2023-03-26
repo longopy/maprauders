@@ -135,7 +135,6 @@ class MenuData {
       </button>
     </div>`;
     });
-    console.log(html);
     menuContainer.innerHTML = html;
   }
 }

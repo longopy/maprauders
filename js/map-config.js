@@ -60,22 +60,29 @@ export default class MapConfig {
     });
     this.loadPopups();
   }
+  getIconStyle(iconName){
+    const path = `../data/icons/points/${iconName}.svg`
+    return new Style({
+      image: this.createIcon(path, 32, 45),
+    });
+  }
+  getIconStyleOnHover(iconName){
+    const path = `../data/icons/points/${iconName}.svg`
+    return new Style({
+      image: this.createIcon(path, 46, 65),
+    });
+  }
   createPoint(point) {
     const iconFeature = new Feature({
       geometry: new Point(point["position"]),
       imgSrc: point["imgSrc"] || undefined,
+      iconName: point["iconName"],
       name: point["name"],
       category: point["category"],
       tag: point["tag"],
     });
-    const iconSrc = `../data/icons/points/${point["iconName"]}.svg`;
-    this.iconStyle = new Style({
-      image: this.createIcon(iconSrc, 32, 45),
-    });
-    this.iconStyleOnHover = new Style({
-      image: this.createIcon(iconSrc, 46, 65),
-    });
-    iconFeature.setStyle(this.iconStyle);
+    const iconStyle = this.getIconStyle(point["iconName"])
+    iconFeature.setStyle(iconStyle);
     return iconFeature;
   }
   createIcon(src, width, height) {
@@ -201,7 +208,7 @@ export default class MapConfig {
       (imgSrc != undefined ? imgContainer : "") +
       `</div>
     <div class="card-body">
-      <h4 class="card-title">${feature.get("name")}</h4>
+      <h4 class="card-title fw-bold">${feature.get("name")}</h4>
       <p class="card-text">
       ${feature.get("description")}
       </p>
@@ -251,6 +258,9 @@ export default class MapConfig {
       return feature;
     });
     this.disposePopover("Name");
+    if (feature != this.currentFeature){
+      this.returnIconStyleCurrentFeature();
+    }
     if (!feature) {
       this.returnIconStyleCurrentFeature();
       return;
@@ -263,12 +273,12 @@ export default class MapConfig {
   }
   changeIconStyleCurrentFeature() {
     if (this.currentFeature != undefined) {
-      this.currentFeature.setStyle(this.iconStyleOnHover);
+       this.currentFeature.setStyle(this.getIconStyleOnHover(this.currentFeature.get("iconName")));
     }
   }
   returnIconStyleCurrentFeature() {
     if (this.currentFeature != undefined) {
-      this.currentFeature.setStyle(this.iconStyle);
+      this.currentFeature.setStyle(this.getIconStyle(this.currentFeature.get("iconName")));
     }
   }
   handleMapMoveStart(e) {

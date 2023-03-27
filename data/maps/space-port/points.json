@@ -38,9 +38,9 @@
       "es": "Alijo Oculto Pepe"
     },
     "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-    "iconName": "hidden_stash",
+    "iconName": "escape_pod",
     "category": "extraction",
-    "tag": "air_lock",
+    "tag": "escape_pod",
     "position": [120, 300]
   },
   {
@@ -49,9 +49,110 @@
       "es": "Alijo Oculto Pepe"
     },
     "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-    "iconName": "hidden_stash",
+    "iconName": "air_lock",
     "category": "extraction",
-    "tag": "escape_pod",
+    "tag": "air_lock",
     "position": [150, 150]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "vault",
+    "category": "loot",
+    "tag": "vault",
+    "position": [78, 82]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "enemy_spawn",
+    "category": "enemy",
+    "tag": "enemy_spawn",
+    "position": [32, 12]
+  }
+  ,
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "enemy_spawn",
+    "category": "enemy",
+    "tag": "enemy_spawn",
+    "position": [45, 33]
+  }
+  ,
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "enemy_spawn",
+    "category": "enemy",
+    "tag": "enemy_spawn",
+    "position": [32, 12]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "blocked_resource_box",
+    "category": "loot",
+    "tag": "blocked_resource_box",
+    "position": [1000, 505]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "blocked_resource_box",
+    "category": "loot",
+    "tag": "blocked_resource_box",
+    "position": [674, 231]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "blocked_access",
+    "category": "loot",
+    "tag": "blocked_access",
+    "position": [1002, 231]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "zero_to_hero",
+    "category": "mission",
+    "tag": "zero_to_hero",
+    "position": [172.58874503045718,691.2818814501552]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "faction_mission",
+    "category": "mission",
+    "tag": "faction_mission",
+    "position": [732.9523565984199,657.9075331231846]
   }
 ]

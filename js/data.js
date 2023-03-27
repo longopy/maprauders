@@ -56,7 +56,7 @@ class MapData {
   }
   loadTags() {
     this.getTags();
-    const tagSelector = document.getElementById("tag-selector");
+    const tagSelector = document.getElementById("tag-selector-content");
     tagSelector.innerHTML = this.generateTagSelector();
   }
   generateTagSelector() {
@@ -72,14 +72,14 @@ class MapData {
     return selector;
   }
   generateTagCard(tag, childrenTags) {
-    let table = `<table class="table table-borderless my-4">
+    let table = `<div class="col-6"><table class="table table-borderless my-4">
     <thead>
       <tr>
         <th scope="col"><button type="button" class="btn selected btn-sm w-100 text-start tag-btn" value="${
           tag["id"]
         }"><img class="me-2" src="../data/icons/tags/${
       tag["id"]
-    }.svg" width="20">${tag["name"][this.lang]}</button></th>
+    }.svg" width="25">${tag["name"][this.lang]}</button></th>
       </tr>
     </thead>
     <tbody>`;
@@ -88,9 +88,9 @@ class MapData {
         child["id"]
       }"><img class="me-2" src="../data/icons/tags/${
         child["id"]
-      }.svg" width="20">${child["name"][this.lang]}</button></td></tr>`;
+      }.svg" width="25">${child["name"][this.lang]}</button></td></tr>`;
     });
-    table = table + rows.join("") + `</tbody></table>`;
+    table = table + rows.join("") + `</tbody></table></div>`;
     return table;
   }
 }
@@ -128,7 +128,7 @@ class MenuData {
         map["cardImgSrc"]
       }" alt="${map["name"][this.lang]}">
           <div class="card-body">
-            <h5 class="card-title">${map["name"][this.lang]}</h5>
+            <h5 class="card-title fw-bold">${map["name"][this.lang]}</h5>
             <p class="card-text">${map["description"][this.lang]}</p>
           </div>
         </div>

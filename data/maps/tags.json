@@ -7,9 +7,30 @@
     },
     "children": [
       {
+        "id": "blocked_resource_box",
+        "name": {
+          "en": "Blocked Resource box",
+          "es": "Caja de recursos bloqueada"
+        }
+      },
+      {
+        "id": "blocked_access",
+        "name": {
+          "en": "Blocked access",
+          "es": "Accesos bloqueados"
+        }
+      },
+      {
+        "id": "vault",
+        "name": {
+          "en": "vault",
+          "es": "Bóveda"
+        }
+      },
+      {
         "id": "hidden_stash",
         "name": {
-          "en": "Hidden Stash",
+          "en": "Hidden stash",
           "es": "Alijo oculto"
         }
       }
@@ -25,15 +46,54 @@
       {
         "id": "escape_pod",
         "name": {
-          "en": "Escape Pod",
+          "en": "Escape pod",
           "es": "Cápsula de escape"
         }
       },
       {
         "id": "air_lock",
         "name": {
-          "en": "Air Lock",
+          "en": "Air lock",
           "es": "Exclusa de aire"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mission",
+    "name": {
+      "en": "Mission",
+      "es": "Misión"
+    },
+    "children": [
+      {
+        "id": "zero_to_hero",
+        "name": {
+          "en": "Zero to hero",
+          "es": "De cero a héroe"
+        }
+      },
+      {
+        "id": "faction_mission",
+        "name": {
+          "en": "Faction mission",
+          "es": "Misión de facción"
+        }
+      }
+    ]
+  },
+  {
+    "id": "enemy",
+    "name": {
+      "en": "Enemy",
+      "es": "Enemigo"
+    },
+    "children": [
+      {
+        "id": "enemy_spawn",
+        "name": {
+          "en": "Enemy spawn",
+          "es": "Aparición de enemigos"
         }
       }
     ]

@@ -1,6 +1,7 @@
 [
   {
     "id": "loot",
+    "iconName": "loot.svg",
     "name": {
       "en": "Loot",
       "es": "Botín"
@@ -8,6 +9,7 @@
     "children": [
       {
         "id": "blocked_resource_box",
+        "iconName": "blocked_resource_box.svg",
         "name": {
           "en": "Blocked Resource box",
           "es": "Caja de recursos bloqueada"
@@ -15,6 +17,7 @@
       },
       {
         "id": "blocked_access",
+        "iconName": "blocked_access.svg",
         "name": {
           "en": "Blocked access",
           "es": "Accesos bloqueados"
@@ -22,6 +25,7 @@
       },
       {
         "id": "vault",
+        "iconName": "vault.svg",
         "name": {
           "en": "vault",
           "es": "Bóveda"
@@ -29,6 +33,7 @@
       },
       {
         "id": "hidden_stash",
+        "iconName": "hidden_stash.svg",
         "name": {
           "en": "Hidden stash",
           "es": "Alijo oculto"
@@ -38,6 +43,7 @@
   },
   {
     "id": "extraction",
+    "iconName": "extraction.svg",
     "name": {
       "en": "Extraction",
       "es": "Extracción"
@@ -45,6 +51,7 @@
     "children": [
       {
         "id": "escape_pod",
+        "iconName": "escape_pod.svg",
         "name": {
           "en": "Escape pod",
           "es": "Cápsula de escape"
@@ -52,6 +59,7 @@
       },
       {
         "id": "air_lock",
+        "iconName": "air_lock.svg",
         "name": {
           "en": "Air lock",
           "es": "Exclusa de aire"
@@ -61,6 +69,7 @@
   },
   {
     "id": "mission",
+    "iconName": "mission.svg",
     "name": {
       "en": "Mission",
       "es": "Misión"
@@ -68,6 +77,7 @@
     "children": [
       {
         "id": "zero_to_hero",
+        "iconName": "zero_to_hero.svg",
         "name": {
           "en": "Zero to hero",
           "es": "De cero a héroe"
@@ -75,6 +85,7 @@
       },
       {
         "id": "faction_mission",
+        "iconName": "faction_mission.svg",
         "name": {
           "en": "Faction mission",
           "es": "Misión de facción"
@@ -84,6 +95,7 @@
   },
   {
     "id": "enemy",
+    "iconName": "enemy.svg",
     "name": {
       "en": "Enemy",
       "es": "Enemigo"
@@ -91,6 +103,7 @@
     "children": [
       {
         "id": "enemy_spawn",
+        "iconName": "enemy_spawn.svg",
         "name": {
           "en": "Enemy spawn",
           "es": "Aparición de enemigos"

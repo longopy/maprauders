@@ -27,13 +27,17 @@ import ImageLayer from "ol/layer/Image.js";
 import Projection from "ol/proj/Projection.js";
 import Static from "ol/source/ImageStatic.js";
 import VectorSource from "ol/source/Vector.js";
-import { Icon, Style } from "ol/style.js";
+import { Icon, Style, Fill, Stroke, Text } from "ol/style.js";
+import { defaults as interactionDefaults } from "ol/interaction.js";
 
 export default class MapConfig {
-  constructor(mapImgSrc, resolution, points, labels) {
+  constructor(mapImgSrc, resolution, points, labels, zoom, minZoom, maxZoom) {
     this.points = points;
     this.labels = labels;
     this.mapImgSrc = mapImgSrc;
+    this.zoom = zoom;
+    this.minZoom = minZoom;
+    this.maxZoom = maxZoom;
     this.resolution = resolution;
     this.extent = [0, 0];
     this.extent = this.extent.concat(this.resolution); // Pixels
@@ -44,30 +48,33 @@ export default class MapConfig {
     });
     this.loadMap();
     this.currentPoints = this.addPoints();
+    this.addLabels();
     this.checkEvents();
   }
   loadMap() {
     this.map = new Map({
       layers: this.loadLayers(),
+      pixelRatio: 1,
       target: document.getElementById("map"),
       view: new View({
         projection: this.projection,
         center: getCenter(this.extent),
-        zoom: 1.5,
-        minZoom: 1.5,
-        maxZoom: 4,
+        zoom: this.zoom,
+        minZoom: this.minZoom,
+        maxZoom: this.maxZoom,
       }),
+      interactions: interactionDefaults({ doubleClickZoom: false }),
     });
     this.loadPopups();
   }
-  getIconStyle(iconName){
-    const path = `../data/icons/points/${iconName}.svg`
+  getIconStyle(iconName) {
+    const path = `../data/icons/points/${iconName}`;
     return new Style({
-      image: this.createIcon(path, 32, 45),
+      image: this.createIcon(path, 33, 46),
     });
   }
-  getIconStyleOnHover(iconName){
-    const path = `../data/icons/points/${iconName}.svg`
+  getIconStyleOnHover(iconName) {
+    const path = `../data/icons/points/${iconName}`;
     return new Style({
       image: this.createIcon(path, 46, 65),
     });
@@ -80,8 +87,9 @@ export default class MapConfig {
       name: point["name"],
       category: point["category"],
       tag: point["tag"],
+      type: "point",
     });
-    const iconStyle = this.getIconStyle(point["iconName"])
+    const iconStyle = this.getIconStyle(point["iconName"]);
     iconFeature.setStyle(iconStyle);
     return iconFeature;
   }
@@ -103,6 +111,41 @@ export default class MapConfig {
     });
     this.addFeatures(this.points);
     return this.points;
+  }
+  getLabelStyle(label) {
+    return new Style({
+      text: new Text({
+        font: `${label['size']}px Calibri, sans-serif`,
+        fill: new Fill({
+          color: "#fff",
+        }),
+        stroke: new Stroke({
+          color: label['outlineColor'],
+          width: 10,
+        }),
+        rotation: label['rotation'] * (Math.PI/180),
+      }),
+    });
+  }
+  createLabel(label) {
+    const labelFeature = new Feature({
+      geometry: new Point(label["position"]),
+      name: label["name"],
+      type: "label",
+    });
+    const labelStyle = this.getLabelStyle(label);
+    labelFeature.setStyle(labelStyle);
+    labelFeature.getStyle().getText().setText(label["name"]);
+    return labelFeature;
+  }
+  addLabels() {
+    const labels = this.labels;
+    this.labels = [];
+    labels.forEach((label) => {
+      this.labels.push(this.createLabel(label));
+    });
+    this.addFeatures(this.labels);
+    return this.labels;
   }
   addFeatures(features) {
     features.forEach((feature) => {
@@ -246,6 +289,9 @@ export default class MapConfig {
       this.enableInteractions();
       return;
     }
+    if (feature.values_["type"] != "point") {
+      return;
+    }
     this.disposePopover("Info");
     this.createPopupInfo(feature);
     this.checkPopoverInfoClose(feature);
@@ -258,12 +304,16 @@ export default class MapConfig {
       return feature;
     });
     this.disposePopover("Name");
-    if (feature != this.currentFeature){
-      this.returnIconStyleCurrentFeature();
-    }
     if (!feature) {
       this.returnIconStyleCurrentFeature();
       return;
+    }
+    if (feature.values_["type"] != "point") {
+      this.map.getTarget().style.cursor = "";
+      return;
+    }
+    if (feature != this.currentFeature) {
+      this.returnIconStyleCurrentFeature();
     }
     this.currentFeature = feature;
     this.changeIconStyleCurrentFeature();
@@ -273,17 +323,21 @@ export default class MapConfig {
   }
   changeIconStyleCurrentFeature() {
     if (this.currentFeature != undefined) {
-       this.currentFeature.setStyle(this.getIconStyleOnHover(this.currentFeature.get("iconName")));
+      this.currentFeature.setStyle(
+        this.getIconStyleOnHover(this.currentFeature.get("iconName"))
+      );
     }
   }
   returnIconStyleCurrentFeature() {
     if (this.currentFeature != undefined) {
-      this.currentFeature.setStyle(this.getIconStyle(this.currentFeature.get("iconName")));
+      this.currentFeature.setStyle(
+        this.getIconStyle(this.currentFeature.get("iconName"))
+      );
     }
   }
   handleMapMoveStart(e) {
     this.returnIconStyleCurrentFeature();
-    this.disposePopover("Info")
+    this.disposePopover("Info");
     this.disposePopover("Name");
   }
   checkMapEvents() {
@@ -323,7 +377,7 @@ export default class MapConfig {
   handleTagClick(e) {
     const activate = e.target.className.includes("unselected");
     this.currentPoints = this.points.filter((point) => {
-      return point.values_.category==e.target.value;
+      return point.values_.category == e.target.value;
     });
     if (activate) {
       this.removeFeatures(this.currentPoints);
@@ -335,7 +389,7 @@ export default class MapConfig {
   handleTagChildClick(e) {
     const activate = e.target.className.includes("unselected");
     this.currentPoints = this.points.filter((point) => {
-      return point.values_.tag==e.target.value;
+      return point.values_.tag == e.target.value;
     });
     if (activate) {
       this.addFeatures(this.currentPoints);

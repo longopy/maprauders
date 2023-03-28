@@ -7,14 +7,18 @@ import MapConfig from "../map-config";
 
 // Tag-Selector
 import "../../js/tag-selector";
+const mapId = "space-port"
 
 // Map
-const mapInfo = mapsInfo.filter((map) => map.id === "space-port")[0];
+const mapInfo = mapsInfo.filter((map) => map.id === mapId)[0];
 const mapData = new MapData(mapInfo, mapPointsData);
 const mapPoints = mapData.getPoints();
 const mapImgSrc = mapData.getMapImgSrc();
 const resolution = mapData.getResolution();
-const mapConfig = new MapConfig(mapImgSrc, resolution, mapPoints, []);
+const zoom = mapData.getZoom();
+const minZoom = mapData.getMinZoom();
+const maxZoom = mapData.getMaxZoom();
+const mapConfig = new MapConfig(mapImgSrc, resolution, mapPoints, [], zoom, minZoom, maxZoom);
 
 // Attributions
 import "../../js/attributions";

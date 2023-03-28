@@ -10,11 +10,12 @@ function getLangFromLocalStorage() {
 }
 
 class MapData {
-  constructor(mapInfo, mapPoints) {
+  constructor(mapInfo, mapPoints, mapLabels) {
     this.mapInfo = mapInfo;
     this.tags = tags;
     this.rootPath = `../data/maps/${this.mapInfo["id"]}/`;
     this.mapPoints = mapPoints;
+    this.mapLabels = mapLabels;
     this.lang = getLangFromLocalStorage();
     this.loadTags();
   }
@@ -30,11 +31,23 @@ class MapData {
   getPoints() {
     return this.getFeaturesByLang(this.mapPoints);
   }
+  getLabels() {
+    return this.getFeaturesByLang(this.mapLabels);
+  }
   getMapImgSrc() {
     return this.rootPath + this.mapInfo["mapImgSrc"];
   }
   getResolution() {
     return this.mapInfo["resolution"];
+  }
+  getZoom() {
+    return this.mapInfo["zoom"];
+  }
+  getMinZoom() {
+    return this.mapInfo["minZoom"];
+  }
+  getMaxZoom() {
+    return this.mapInfo["maxZoom"];
   }
   getMapTags() {
     const tags = [];
@@ -78,8 +91,8 @@ class MapData {
         <th scope="col"><button type="button" class="btn selected btn-sm w-100 text-start tag-btn" value="${
           tag["id"]
         }"><img class="me-2" src="../data/icons/tags/${
-      tag["id"]
-    }.svg" width="25">${tag["name"][this.lang]}</button></th>
+      tag["iconName"]
+    }" width="25">${tag["name"][this.lang]}</button></th>
       </tr>
     </thead>
     <tbody>`;
@@ -87,8 +100,8 @@ class MapData {
       return `<tr><td><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
       }"><img class="me-2" src="../data/icons/tags/${
-        child["id"]
-      }.svg" width="25">${child["name"][this.lang]}</button></td></tr>`;
+        child["iconName"]
+      }" width="25">${child["name"][this.lang]}</button></td></tr>`;
     });
     table = table + rows.join("") + `</tbody></table></div>`;
     return table;

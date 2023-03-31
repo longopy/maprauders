@@ -8,6 +8,22 @@
     },
     "children": [
       {
+        "id": "ammo",
+        "iconName": "ammo.svg",
+        "name": {
+          "en": "Ammo",
+          "es": "Munición"
+        }
+      },
+      {
+        "id": "medic_kit",
+        "iconName": "medic_kit.svg",
+        "name": {
+          "en": "Medic kit",
+          "es": "Botiquín"
+        }
+      },
+      {
         "id": "blocked_resource_box",
         "iconName": "blocked_resource_box.svg",
         "name": {

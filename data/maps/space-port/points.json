@@ -154,5 +154,27 @@
     "category": "mission",
     "tag": "faction_mission",
     "position": [732.9523565984199,657.9075331231846]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "medic_kit.svg",
+    "category": "loot",
+    "tag": "medic_kit",
+    "position": [755.7696643701474,465.0533708687392]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [440.45279977399167,869.43683353302]
   }
 ]

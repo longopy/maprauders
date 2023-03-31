@@ -1,1 +1,15 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><style>.a{fill:#d33b3b;stroke:#000;paint-order:stroke fill markers;stroke-linejoin:round;stroke-width:8}</style><path class="a" d="m32 60c-15.5 0-28-12.5-28-28 0-15.5 12.5-28 28-28 15.5 0 28 12.5 28 28 0 15.5-12.5 28-28 28z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_8" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+    viewBox="0 0 345.75 489.31">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #d43c3c;
+                stroke: #1d1d1b;
+                stroke-miterlimit: 10;
+                stroke-width: 10px;
+            }
+        </style>
+    </defs>
+    <circle class="cls-1" cx="171.52" cy="218.65" r="166.3" />
+</svg>

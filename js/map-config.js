@@ -70,7 +70,7 @@ export default class MapConfig {
   getIconStyle(iconName) {
     const path = `../data/icons/points/${iconName}`;
     return new Style({
-      image: this.createIcon(path, 33, 46),
+      image: this.createIcon(path, 31, 50),
     });
   }
   getIconStyleOnHover(iconName) {
@@ -94,6 +94,7 @@ export default class MapConfig {
     return iconFeature;
   }
   createIcon(src, width, height) {
+    console.log(src)
     return new Icon({
       anchor: [0.5, 65],
       anchorXUnits: "fraction",

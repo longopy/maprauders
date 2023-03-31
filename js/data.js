@@ -85,25 +85,21 @@ class MapData {
     return selector;
   }
   generateTagCard(tag, childrenTags) {
-    let table = `<div class="col-6"><table class="table table-borderless my-4">
-    <thead>
-      <tr>
-        <th scope="col"><button type="button" class="btn selected btn-sm w-100 text-start tag-btn" value="${
-          tag["id"]
-        }"><img class="me-2" src="../data/icons/tags/${
+    let table = `<div class="col-12 col-md-6 mb-4">
+    <div class="p-2"><button type="button" class="btn selected btn-sm w-100 text-start tag-btn" value="${
+      tag["id"]
+    }"><img class="me-2" src="../data/icons/tags/${
       tag["iconName"]
     }" width="25">${tag["name"][this.lang]}</button></th>
-      </tr>
-    </thead>
-    <tbody>`;
+     </div>`;
     const rows = childrenTags.map((child) => {
-      return `<tr><td><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
+      return `<div class="p-2"><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
       }"><img class="me-2" src="../data/icons/tags/${
         child["iconName"]
-      }" width="25">${child["name"][this.lang]}</button></td></tr>`;
+      }" width="25">${child["name"][this.lang]}</button></div>`;
     });
-    table = table + rows.join("") + `</tbody></table></div>`;
+    table = table + rows.join("") + `</div></div></div>`;
     return table;
   }
 }

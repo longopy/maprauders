@@ -128,16 +128,17 @@ class MenuData {
     const menuContainer = document.getElementById("menu-div");
     let html = "";
     maps.forEach((map) => {
-      html += `<div class="col p-3">
-      <button class="btn p-0 rounded" onclick="window.location.href='./maps/${
+      html += `<div class="col text-center">
+      <button class="btn p-0 rounded h-100" onclick="window.location.href='./maps/${
         map["id"]
       }.html'">
-        <div class="card" style="width: 18rem;">
+        <div class="card h-100">
           <img class="card-img-top" src="./data/maps/${map["id"]}/${
         map["cardImgSrc"]
       }" alt="${map["name"][this.lang]}">
           <div class="card-body">
-            <h5 class="card-title fw-bold">${map["name"][this.lang]}</h5>
+            <h4 class="card-title fw-bold">${map["name"][this.lang]}</h4>
+            <h4><span class="badge bg-white text-black">${map["alias"][this.lang]}</span></h4>
             <p class="card-text">${map["description"][this.lang]}</p>
           </div>
         </div>

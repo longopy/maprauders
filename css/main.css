@@ -39,6 +39,9 @@ a:hover {
   position: relative;
 }
 
+.btn:hover{
+  border-color: var(--text-color);
+}
 
 .card {
     border: 0;

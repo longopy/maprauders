@@ -2,8 +2,12 @@
   {
     "id": "asteroid-mine",
     "name": {
-      "en": "Iridium Asteroid Mine",
-      "es": "Mina de Asteroides de Iridio"
+      "en": "Asteroide mine Delta-X9",
+      "es": "Mina de asteroides Delta-X9"
+    },
+    "alias": {
+      "en": "Asteroid mine",
+      "es": "Mina de asteroides"
     },
     "cardImgSrc": "cardImg.png",
     "mapImgSrc": "mapImg.png",
@@ -19,8 +23,12 @@
   {
     "id": "space-port",
     "name": {
+      "en": "L1812 Service Space Station",
+      "es": "L1812 Estación espacial de servicio"
+    },
+    "alias": {
       "en": "Space Port",
-      "es": "Estación Espacial"
+      "es": "Estación espacial"
     },
     "cardImgSrc": "cardImg.png",
     "mapImgSrc": "mapImg.png",

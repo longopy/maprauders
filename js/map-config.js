@@ -94,7 +94,6 @@ export default class MapConfig {
     return iconFeature;
   }
   createIcon(src, width, height) {
-    console.log(src)
     return new Icon({
       anchor: [0.5, 65],
       anchorXUnits: "fraction",

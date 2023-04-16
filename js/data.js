@@ -40,6 +40,9 @@ class MapData {
   getResolution() {
     return this.mapInfo["resolution"];
   }
+  getPadding() {
+    return this.mapInfo["padding"];
+  }
   getZoom() {
     return this.mapInfo["zoom"];
   }

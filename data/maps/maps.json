@@ -10,10 +10,11 @@
       "es": "Mina de asteroides"
     },
     "cardImgSrc": "cardImg.png",
-    "mapImgSrc": "mapImg.png",
+    "mapImgSrc": "mapImg.svg",
     "resolution": [2560, 1080],
-    "zoom": 2.5,
-    "minZoom": 2.5,
+    "padding": "50px 65px 0px 65px",
+    "zoom": 2,
+    "minZoom": 2,
     "maxZoom": 6,
     "description": {
       "en": "A mine belonging to the United Allies, which contained rebel cells to the three main factions, would be invaded by the Raiders.",
@@ -31,10 +32,11 @@
       "es": "Estación espacial"
     },
     "cardImgSrc": "cardImg.png",
-    "mapImgSrc": "mapImg.png",
-    "resolution": [1024, 968],
-    "zoom": 1.5,
-    "minZoom": 1.5,
+    "mapImgSrc": "mapImg.svg",
+    "resolution": [2560, 1080],
+    "padding": "50px 65px 0px 65px",
+    "zoom": 2,
+    "minZoom": 2,
     "maxZoom": 6,
     "description": {
       "en": "A large spaceport. It used to be a thriving place until it was attacked because of its highly valuable bank vault.",

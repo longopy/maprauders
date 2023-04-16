@@ -22,30 +22,25 @@ import Overlay from "ol/Overlay.js";
 import View from "ol/View.js";
 import { getCenter } from "ol/extent.js";
 import Point from "ol/geom/Point.js";
-import { Vector as VectorLayer } from "ol/layer.js";
-import ImageLayer from "ol/layer/Image.js";
-import Projection from "ol/proj/Projection.js";
-import Static from "ol/source/ImageStatic.js";
+import { Vector as VectorLayer, Layer } from "ol/layer.js";
 import VectorSource from "ol/source/Vector.js";
 import { Icon, Style, Fill, Stroke, Text } from "ol/style.js";
 import { defaults as interactionDefaults } from "ol/interaction.js";
+import {composeCssTransform} from 'ol/transform.js';
 
 export default class MapConfig {
-  constructor(mapImgSrc, resolution, points, labels, zoom, minZoom, maxZoom) {
+  constructor(mapImgSrc, resolution, points, labels, padding, zoom, minZoom, maxZoom) {
     this.points = points;
     this.labels = labels;
     this.mapImgSrc = mapImgSrc;
+    this.padding = padding;
     this.zoom = zoom;
     this.minZoom = minZoom;
     this.maxZoom = maxZoom;
     this.resolution = resolution;
     this.extent = [0, 0];
     this.extent = this.extent.concat(this.resolution); // Pixels
-    this.projection = new Projection({
-      code: "xkcd-image",
-      units: "pixels",
-      extent: this.extent,
-    });
+    this.projection = 'EPSG:4326';
     this.loadMap();
     this.currentPoints = this.addPoints();
     this.addLabels();
@@ -59,6 +54,7 @@ export default class MapConfig {
       view: new View({
         projection: this.projection,
         center: getCenter(this.extent),
+        extent: [-180, -90, 180, 90],
         zoom: this.zoom,
         minZoom: this.minZoom,
         maxZoom: this.maxZoom,
@@ -115,15 +111,15 @@ export default class MapConfig {
   getLabelStyle(label) {
     return new Style({
       text: new Text({
-        font: `${label['size']}px Calibri, sans-serif`,
+        font: `${label["size"]}px Calibri, sans-serif`,
         fill: new Fill({
           color: "#fff",
         }),
         stroke: new Stroke({
-          color: label['outlineColor'],
+          color: label["outlineColor"],
           width: 10,
         }),
-        rotation: label['rotation'] * (Math.PI/180),
+        rotation: label["rotation"] * (Math.PI / 180),
       }),
     });
   }
@@ -160,22 +156,54 @@ export default class MapConfig {
   loadVectorLayer() {
     this.vectorSource = new VectorSource();
     this.vectorLayer = new VectorLayer({
-      source: this.vectorSource,
+      source: this.vectorSource
     });
     return this.vectorLayer;
   }
+  loadImageMap(svgContainer) {
+    fetch(`../map/${this.mapImgSrc}`)
+      .then((response) => response.text())
+      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      .then(svg => svg.documentElement)
+      .then((svg) => {
+        svgContainer.ownerDocument.importNode(svg);
+        svgContainer.appendChild(svg);
+      });
+  }
   loadImageMapLayer() {
-    this.imageMapLayer = new ImageLayer({
-      source: new Static({
-        url: this.mapImgSrc,
-        projection: this.projection,
-        imageExtent: this.extent,
-      }),
+    const svgContainer = document.createElement("div");
+    this.loadImageMap(svgContainer);
+    const width = this.resolution[0];
+    const height = this.resolution[1];
+    const svgResolution = 360 / width;
+    svgContainer.style.padding = this.padding;
+    svgContainer.style.width = width + "px";
+    svgContainer.style.height = height + "px";
+    svgContainer.style.transformOrigin = "top left";
+    svgContainer.className = "svg-layer";
+    this.imageMapLayer = new Layer({
+      render: function (frameState) {
+        const scale = svgResolution / frameState.viewState.resolution;
+        const center = frameState.viewState.center;
+        const size = frameState.size;
+        const cssTransform = composeCssTransform(
+          size[0] / 2,
+          size[1] / 2,
+          scale,
+          scale,
+          frameState.viewState.rotation,
+          -center[0] / svgResolution - width / 2,
+          center[1] / svgResolution - height / 2
+        );
+        svgContainer.style.transform = cssTransform;
+        svgContainer.style.opacity = this.getOpacity();
+        return svgContainer;
+      },
     });
     return this.imageMapLayer;
   }
   loadLayers() {
-    return [this.loadImageMapLayer(), this.loadVectorLayer()];
+    return [this.loadVectorLayer(), this.loadImageMapLayer()]
   }
   loadPopupNameOverlay() {
     this.popupName = new Overlay({

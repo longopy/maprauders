@@ -4,9 +4,30 @@
       "en": "Market",
       "es": "Mercado"
     },
-    "size": 18,
-    "outlineColor": "#2c2c2c",
+    "size": 20,
+    "outlineColor": "#000",
     "rotation": 270,
-    "position": [1130.780861065891, 737.2429934505882]
+    "position": [-28.125,19.7016882144206]
+  },
+  {
+    "name": {
+      "en": "Export",
+      "es": "Exportación"
+    },
+    "size": 20,
+    "outlineColor": "#000",
+    "rotation": 0,
+    "position": [-56.6015625,26.33570195273714]
+  },
+  {
+    "name": {
+      "en": "Example",
+      "es": "Ejemplo"
+    },
+    "size": 20,
+    "outlineColor": "#000",
+    "rotation": 0,
+    "position": [-72.24609375,0.3696524733862532]
   }
+  
 ]

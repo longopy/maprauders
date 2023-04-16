@@ -17,10 +17,11 @@ const mapPoints = mapData.getPoints();
 const mapLabels = mapData.getLabels();
 const mapImgSrc = mapData.getMapImgSrc();
 const resolution = mapData.getResolution();
+const padding = mapData.getPadding();
 const zoom = mapData.getZoom();
 const minZoom = mapData.getMinZoom();
 const maxZoom = mapData.getMaxZoom();
-const mapConfig = new MapConfig(mapImgSrc, resolution, mapPoints, mapLabels, zoom, minZoom, maxZoom);
+const mapConfig = new MapConfig(mapImgSrc, resolution, mapPoints, mapLabels, padding, zoom, minZoom, maxZoom);
 
 // Attributions
 import "../../js/attributions";

@@ -8,7 +8,7 @@
     "iconName": "hidden_stash.svg",
     "category": "loot",
     "tag": "hidden_stash",
-    "position": [487.6332462267761, 502.8370584449619]
+    "position": [-96.03128398795849,-4.167789817435597]
   },
   {
     "name": {
@@ -19,7 +19,7 @@
     "iconName": "hidden_stash.svg",
     "category": "loot",
     "tag": "hidden_stash",
-    "position": [200, 300]
+    "position": [-55.50657810826084,13.415250646717212]
   },
   {
     "name": {
@@ -30,7 +30,7 @@
     "iconName": "hidden_stash.svg",
     "category": "loot",
     "tag": "hidden_stash",
-    "position": [200, 100]
+    "position": [8.0859375,45.36057201615708]
   },
   {
     "name": {
@@ -41,7 +41,7 @@
     "iconName": "escape_pod.svg",
     "category": "extraction",
     "tag": "escape_pod",
-    "position": [120, 300]
+    "position": [-79.1015625,-71.15887976844078]
   },
   {
     "name": {
@@ -52,7 +52,7 @@
     "iconName": "air_lock.svg",
     "category": "extraction",
     "tag": "air_lock",
-    "position": [150, 150]
+    "position": [-48.33984375,66.27431977236695]
   },
   {
     "name": {
@@ -63,7 +63,7 @@
     "iconName": "vault.svg",
     "category": "loot",
     "tag": "vault",
-    "position": [78, 82]
+    "position": [-124.27734375,51.687420076859226]
   },
   {
     "name": {
@@ -74,7 +74,7 @@
     "iconName": "enemy_spawn.svg",
     "category": "enemy",
     "tag": "enemy_spawn",
-    "position": [32, 12]
+    "position": [-43.06640625,-48.31192843812747]
   }
   ,
   {
@@ -86,7 +86,7 @@
     "iconName": "enemy_spawn.svg",
     "category": "enemy",
     "tag": "enemy_spawn",
-    "position": [45, 33]
+    "position": [-10.1953125,-29.1556384765571]
   }
   ,
   {
@@ -95,10 +95,10 @@
       "es": "Alijo Oculto Pepe"
     },
     "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-    "iconName": "enemy_spawn.svg",
-    "category": "enemy",
-    "tag": "enemy_spawn",
-    "position": [32, 12]
+    "iconName": "blocked_resource_box.svg",
+    "category": "loot",
+    "tag": "blocked_resource_box",
+    "position": [0.3515625,-39.348893685466095]
   },
   {
     "name": {
@@ -109,18 +109,7 @@
     "iconName": "blocked_resource_box.svg",
     "category": "loot",
     "tag": "blocked_resource_box",
-    "position": [1000, 505]
-  },
-  {
-    "name": {
-      "en": "Hidden Stash Pepe",
-      "es": "Alijo Oculto Pepe"
-    },
-    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
-    "iconName": "blocked_resource_box.svg",
-    "category": "loot",
-    "tag": "blocked_resource_box",
-    "position": [674, 231]
+    "position": [-15.64453125,28.488977187618026]
   },
   {
     "name": {
@@ -131,7 +120,7 @@
     "iconName": "blocked_access.svg",
     "category": "loot",
     "tag": "blocked_access",
-    "position": [1002, 231]
+    "position": [-126.5625,-3.1452631158927176]
   },
   {
     "name": {
@@ -142,7 +131,7 @@
     "iconName": "zero_to_hero.svg",
     "category": "mission",
     "tag": "zero_to_hero",
-    "position": [172.58874503045718,691.2818814501552]
+    "position": [-100.72265625,58.01426813756137]
   },
   {
     "name": {
@@ -153,6 +142,6 @@
     "iconName": "faction_mission.svg",
     "category": "mission",
     "tag": "faction_mission",
-    "position": [732.9523565984199,657.9075331231846]
+    "position": [-80.5078125,-12.10829786855409]
   }
 ]

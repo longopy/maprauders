@@ -13,9 +13,9 @@
     "mapImgSrc": "mapImg.svg",
     "resolution": [2560, 1080],
     "padding": "50px 65px 0px 65px",
-    "zoom": 2,
-    "minZoom": 2,
-    "maxZoom": 6,
+    "zoom": 1,
+    "minZoom": 1,
+    "maxZoom": 7,
     "description": {
       "en": "A mine belonging to the United Allies, which contained rebel cells to the three main factions, would be invaded by the Raiders.",
       "es": "Mina perteneciente a los Aliados Unidos que conteniendo células rebeldes a las tres facciones principales, sería invadida por los Asaltantes."
@@ -35,9 +35,9 @@
     "mapImgSrc": "mapImg.svg",
     "resolution": [2560, 1080],
     "padding": "50px 65px 0px 65px",
-    "zoom": 2,
-    "minZoom": 2,
-    "maxZoom": 6,
+    "zoom": 1,
+    "minZoom": 1,
+    "maxZoom": 7,
     "description": {
       "en": "A large spaceport. It used to be a thriving place until it was attacked because of its highly valuable bank vault.",
       "es": "Un gran puerto espacial. Solía ser un lugar próspero hasta que fue atacado por su valiosa bóveda bancaria."

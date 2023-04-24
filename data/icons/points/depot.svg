@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="65"  viewBox="0 0 345.75 489.31">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 12px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 6px;
+      }
+
+      .cls-3 {
+        stroke-width: 10px;
+      }
+
+      .cls-4 {
+        fill: #3e92d0;
+        stroke-width: 15px;
+      }
+    </style>
+  </defs>
+  <g id="point">
+    <path class="cls-4" d="m338.25,172.94c0,19.96-3.55,39.09-10.04,56.8-20.63,56.33-127.49,215.19-150.83,249.59-2.2,3.24-6.95,3.33-9.26.16C141.06,442.36,7.5,254.96,7.5,172.88,7.5,80.42,83.37,5.68,176.25,7.53c89.71,1.79,162.04,75.67,162,165.41Z"/>
+  </g>
+  <g id="depot">
+    <rect class="cls-3" x="62.95" y="94.44" width="225.39" height="166.51" rx=".87" ry=".87"/>
+    <path class="cls-1" d="m131.63,95.68v162.77"/>
+    <path class="cls-1" d="m65.63,95.68v162.77"/>
+    <path class="cls-1" d="m222.63,95.68v162.77"/>
+    <path class="cls-1" d="m286.63,95.68v162.77"/>
+    <path class="cls-2" d="m68.22,114.71h214.64"/>
+    <path class="cls-2" d="m68.22,134.71h214.64"/>
+    <path class="cls-2" d="m68.22,243.71h214.64"/>
+    <path class="cls-2" d="m68.22,223.71h214.64"/>
+    <path class="cls-2" d="m68.22,203.71h214.64"/>
+    <rect class="cls-3" x="162.47" y="148.61" width="26.34" height="9.37"/>
+  </g>
+</svg>

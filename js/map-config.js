@@ -27,6 +27,7 @@ import VectorSource from "ol/source/Vector.js";
 import { Icon, Style, Fill, Stroke, Text } from "ol/style.js";
 import { defaults as interactionDefaults } from "ol/interaction.js";
 import {composeCssTransform} from 'ol/transform.js';
+import { transform } from "ol/proj";
 
 export default class MapConfig {
   constructor(mapImgSrc, resolution, points, labels, padding, zoom, minZoom, maxZoom) {
@@ -111,7 +112,7 @@ export default class MapConfig {
   getLabelStyle(label) {
     return new Style({
       text: new Text({
-        font: `${label["size"]}px Calibri, sans-serif`,
+        font: `small-caps ${label["size"]}px Montserrat, sans-serif`,
         fill: new Fill({
           color: "#fff",
         }),
@@ -124,6 +125,7 @@ export default class MapConfig {
     });
   }
   createLabel(label) {
+    console.log(label["name"].toUpperCase());
     const labelFeature = new Feature({
       geometry: new Point(label["position"]),
       name: label["name"],

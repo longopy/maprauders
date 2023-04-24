@@ -143,5 +143,16 @@
     "category": "mission",
     "tag": "faction_mission",
     "position": [-80.5078125,-12.10829786855409]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash Pepe",
+      "es": "Alijo Oculto Pepe"
+    },
+    "imgSrc": "https://cdn.akamai.steamstatic.com/steam/apps/1789480/ss_9abe13d99c6237b99b25fdcd622df36681240eab.1920x1080.jpg",
+    "iconName": "depot.svg",
+    "category": "loot",
+    "tag": "depot",
+    "position": [-10.8984375,1.2483813707060136]
   }
 ]

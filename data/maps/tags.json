@@ -54,6 +54,14 @@
           "en": "Hidden stash",
           "es": "Alijo oculto"
         }
+      },
+      {
+        "id": "depot",
+        "iconName": "depot.svg",
+        "name": {
+          "en": "Depot",
+          "es": "Almacén"
+        }
       }
     ]
   },

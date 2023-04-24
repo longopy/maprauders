@@ -140,8 +140,8 @@ class MenuData {
         map["cardImgSrc"]
       }" alt="${map["name"][this.lang]}">
           <div class="card-body">
-            <h4 class="card-title fw-bold">${map["name"][this.lang]}</h4>
-            <h4><span class="badge bg-white text-black">${map["alias"][this.lang]}</span></h4>
+            <h4 class="card-title text-uppercase fw-ligh">${map["name"][this.lang]}</h4>
+            <h4><span class="badge bg-white text-black text-uppercase fw-ligh">${map["alias"][this.lang]}</span></h4>
             <p class="card-text">${map["description"][this.lang]}</p>
           </div>
         </div>

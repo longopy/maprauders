@@ -22,6 +22,9 @@ class MapData {
   getFeaturesByLang(features) {
     features.forEach((feature) => {
       feature["name"] = feature["name"][this.lang];
+      if (feature.hasOwnProperty("description")) {
+        feature["description"] = feature["description"][this.lang];
+      }
     });
     return features;
   }
@@ -140,9 +143,17 @@ class MenuData {
         map["cardImgSrc"]
       }" alt="${map["name"][this.lang]}">
           <div class="card-body">
-            <h4 class="card-title text-uppercase fw-ligh">${map["name"][this.lang]}</h4>
-            <h4><span class="badge bg-white text-black text-uppercase fw-ligh">${map["alias"][this.lang]}</span></h4>
-            <p class="card-text">${map["description"][this.lang]}</p>
+            <h4 class="card-title text-uppercase fw-ligh">${
+              map["name"][this.lang]
+            }</h4>
+            <h4><span class="badge bg-white text-black text-uppercase fw-ligh">${
+              map["alias"][this.lang]
+            }</span></h4>
+            ${
+              map["description"][this.lang] != "undefined"
+                ? `<p class="card-text">${map["description"][this.lang]}</p>`
+                : ""
+            }
           </div>
         </div>
       </button>

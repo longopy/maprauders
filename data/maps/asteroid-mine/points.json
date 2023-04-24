@@ -154,5 +154,29 @@
     "category": "loot",
     "tag": "depot",
     "position": [-10.8984375,1.2483813707060136]
+  },
+  {
+    "name": {
+      "en": "Dead body",
+      "es": "Cadáver"
+    },
+    "iconName": "dead_body.svg",
+    "category": "loot",
+    "tag": "dead_body",
+    "position": [-43.2421875,-11.405314750698281]
+  },
+  {
+    "name": {
+      "en": "Container",
+      "es": "Contenedor"
+    },
+    "description": {
+      "en": "A container with loot inside.",
+      "es": "Un contenedor con botín dentro."
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [16.875,-6.132941366779832]
   }
 ]

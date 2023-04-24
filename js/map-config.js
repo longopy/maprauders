@@ -82,6 +82,7 @@ export default class MapConfig {
       imgSrc: point["imgSrc"] || undefined,
       iconName: point["iconName"],
       name: point["name"],
+      description: point["description"],
       category: point["category"],
       tag: point["tag"],
       type: "point",
@@ -282,9 +283,7 @@ export default class MapConfig {
       `</div>
     <div class="card-body">
       <h4 class="card-title fw-bold">${feature.get("name")}</h4>
-      <p class="card-text">
-      ${feature.get("description")}
-      </p>
+      ${feature.get("description") != undefined ? `<p class="card-text">${feature.get("description")}</p>` : ""}
     </div>
   </div>`
     );

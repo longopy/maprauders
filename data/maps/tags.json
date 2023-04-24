@@ -24,6 +24,22 @@
         }
       },
       {
+        "id": "container",
+        "iconName": "container.svg",
+        "name": {
+          "en": "Container",
+          "es": "Contenedor"
+        }
+      },
+      {
+        "id": "dead_body",
+        "iconName": "dead_body.svg",
+        "name": {
+          "en": "Dead body",
+          "es": "Cadáver"
+        }
+      },
+      {
         "id": "blocked_resource_box",
         "iconName": "blocked_resource_box.svg",
         "name": {
@@ -40,6 +56,14 @@
         }
       },
       {
+        "id": "depot",
+        "iconName": "depot.svg",
+        "name": {
+          "en": "Depot",
+          "es": "Almacén"
+        }
+      },
+      {
         "id": "vault",
         "iconName": "vault.svg",
         "name": {
@@ -53,14 +77,6 @@
         "name": {
           "en": "Hidden stash",
           "es": "Alijo oculto"
-        }
-      },
-      {
-        "id": "depot",
-        "iconName": "depot.svg",
-        "name": {
-          "en": "Depot",
-          "es": "Almacén"
         }
       }
     ]

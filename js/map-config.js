@@ -249,7 +249,7 @@ export default class MapConfig {
       container: "body",
       animation: false,
       html: true,
-      placement: "bottom",
+      placement: "right",
       content: `<p class="popup-name-text">${feature.get("name")}</p>`,
     });
     this.popoverName.show();
@@ -260,7 +260,7 @@ export default class MapConfig {
     this.popoverInfo = new bootstrap.Popover(popupContainer, {
       container: "body",
       animation: true,
-      placement: "top",
+      placement: "bottom",
       html: true,
       content: this.generateInfoCard(feature),
     });
@@ -282,7 +282,7 @@ export default class MapConfig {
       (imgSrc != undefined ? imgContainer : "") +
       `</div>
     <div class="card-body">
-      <h4 class="card-title fw-bold">${feature.get("name")}</h4>
+      <h5 class="card-title fw-bold text-uppercase">${feature.get("name")}</h5>
       ${feature.get("description") != undefined ? `<p class="card-text">${feature.get("description")}</p>` : ""}
     </div>
   </div>`
@@ -321,8 +321,10 @@ export default class MapConfig {
     if (feature.values_["type"] != "point") {
       return;
     }
-    this.disposePopover("Info");
+    this.disposePopover("Info")
     this.createPopupInfo(feature);
+    this.currentFeature = feature;
+    this.currentFeature.disabled = true
     this.checkPopoverInfoClose(feature);
   }
   handleMapPointerMove(e) {

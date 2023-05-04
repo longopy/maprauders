@@ -178,5 +178,19 @@
     "category": "loot",
     "tag": "container",
     "position": [16.875,-6.132941366779832]
+  },
+  {
+    "name": {
+      "en": "Breach pod",
+      "es": "Cápsula enemiga"
+    },
+    "description": {
+      "en": "A container with loot inside.",
+      "es": "Un contenedor con botín dentro."
+    },
+    "iconName": "breach_pod.svg",
+    "category": "enemy",
+    "tag": "breach_pod",
+    "position": [6.6796875,23.216603803699584]
   }
 ]

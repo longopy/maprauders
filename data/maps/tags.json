@@ -148,6 +148,14 @@
           "en": "Enemy spawn",
           "es": "Aparición de enemigos"
         }
+      },
+      {
+        "id": "breach_pod",
+        "iconName": "breach_pod.svg",
+        "name": {
+          "en": "Breach pod",
+          "es": "Cápsula enemiga"
+        }
       }
     ]
   }

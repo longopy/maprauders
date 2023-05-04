@@ -5,7 +5,10 @@ import "../css/lang.css"
 
 function detectLanguage() {
     if (!localStorage.hasOwnProperty('lang')){
-        localStorage.setItem('lang', 'en');
+        const langs = ['en', 'es'];
+        const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
+        const lang = langs.includes(browserLang) ? browserLang : 'en';
+        localStorage.setItem('lang', lang);
     }
 }
 

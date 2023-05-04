@@ -67,7 +67,7 @@ export default class MapConfig {
   getIconStyle(iconName) {
     const path = `../data/icons/points/${iconName}`;
     return new Style({
-      image: this.createIcon(path, 31, 50),
+      image: this.createIcon(path, 32.2, 45.5),
     });
   }
   getIconStyleOnHover(iconName) {

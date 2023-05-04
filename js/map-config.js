@@ -212,6 +212,7 @@ export default class MapConfig {
     this.popupName = new Overlay({
       element: document.getElementById("popup-name"),
       positioning: "bottom-center",
+      offset: [20, -32.5],
       stopEvent: false,
     });
     this.map.addOverlay(this.popupName);
@@ -243,7 +244,11 @@ export default class MapConfig {
     document.getElementById("hud").style.display = "block";
   }
   createPopupName(feature) {
-    this.popupName.setPosition(feature.getGeometry().getCoordinates());
+    let position = feature.getGeometry().getCoordinates()
+    console.log(`position: ${position}`)
+    console.log(`center: ${getCenter(feature.getGeometry().getExtent())}`)
+    position[1] = position[1] + 0.3
+    this.popupName.setPosition(position);
     const popupContainer = document.getElementById("popup-name");
     this.popoverName = new bootstrap.Popover(popupContainer, {
       container: "body",

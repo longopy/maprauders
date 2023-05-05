@@ -10,7 +10,8 @@
     },
     "devDependencies": {
         "sass": "^1.59.2",
-        "vite": "^4.2.1"
+        "vite": "^4.2.1",
+        "vite-plugin-static-copy": "^0.14.0"
     },
     "scripts": {
         "start": "vite",

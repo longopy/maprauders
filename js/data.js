@@ -91,13 +91,13 @@ class MapData {
     return selector;
   }
   generateTagCard(tag, childrenTags) {
-    let table = `<div class="col-12 col-md-6 mb-4">
-    <div class="p-2"><button type="button" class="btn selected btn-sm w-100 text-start tag-btn" value="${
+    let card = `<div class="col-12 col-md-6 mb-4">
+    <div class="p-2" style="border: 1px solid ${tag['color']}"><button type="button" class="btn selected btn-sm w-100 text-center tag-btn" style="border: 1px solid ${tag['color']}" value="${
       tag["id"]
     }"><img class="me-2" src="../data/icons/tags/${
       tag["iconName"]
     }" width="25">${tag["name"][this.lang]}</button></th>
-     </div>`;
+     </div><div style="border: 1px solid ${tag['color']}">`;
     const rows = childrenTags.map((child) => {
       return `<div class="p-2"><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
@@ -105,8 +105,8 @@ class MapData {
         child["iconName"]
       }" width="25">${child["name"][this.lang]}</button></div>`;
     });
-    table = table + rows.join("") + `</div></div></div>`;
-    return table;
+    card = card + rows.join("") + `</div></div></div></div>`;
+    return card;
   }
 }
 

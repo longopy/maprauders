@@ -86,7 +86,7 @@
       "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Escape_Pod'>cápsula de escape</a> además de permitirte escapar del mapa también permite abordar otras naves. Ten cuidado, se trata de un medio de transporte bastante peligroso debido a la fragilidad de la cápsula."
     },
     "category": "extraction",
-    "tag": "airlock",
+    "tag": "escape_pod",
     "position": [73.99366102406464,35.92801300957194]
   },
   {

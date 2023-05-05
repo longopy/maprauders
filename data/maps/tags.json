@@ -6,6 +6,7 @@
       "en": "Loot",
       "es": "Botín"
     },
+    "color": "#3e92d0",
     "children": [
       {
         "id": "ammo",
@@ -88,6 +89,7 @@
       "en": "Extraction",
       "es": "Extracción"
     },
+    "color": "#facd45",
     "children": [
       {
         "id": "escape_pod",
@@ -114,6 +116,7 @@
       "en": "Mission",
       "es": "Misión"
     },
+    "color": "#5db670",
     "children": [
       {
         "id": "zero_to_hero",
@@ -140,6 +143,7 @@
       "en": "Enemy",
       "es": "Enemigo"
     },
+    "color": "#d43c3c",
     "children": [
       {
         "id": "enemy_spawn",

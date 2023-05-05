@@ -28,7 +28,6 @@
 .tag-btn.selected:hover {
   color: var(--text-color);
   background-color:var(--body-background-color);
-  border-color: var(--accent-color);
 }
 
 .tag-btn.unselected,
@@ -36,7 +35,6 @@
   color: var(--btn-disabled-tag-btn-color);
   background-color: transparent;
   background-image: none;
-  border-color: var(--btn-disabled-tag-btn-color);
   text-decoration:line-through;
 }
 

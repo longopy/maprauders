@@ -414,12 +414,11 @@ export default class MapConfig {
     this.currentPoints = this.points.filter((point) => {
       return point.values_.category == e.target.value;
     });
+    this.removeFeatures(this.currentPoints);
     if (activate) {
-      this.removeFeatures(this.currentPoints);
       this.addFeatures(this.currentPoints);
-    } else {
-      this.removeFeatures(this.currentPoints);
     }
+    
   }
   handleTagChildClick(e) {
     const activate = e.target.className.includes("unselected");

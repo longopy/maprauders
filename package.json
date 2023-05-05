@@ -14,7 +14,7 @@
     },
     "scripts": {
         "start": "vite",
-        "build": "vite build && cp data/* -r build/data/",
+        "build": "vite build && cp data/* -r build/data",
         "preview": "vite preview"
     }
 }

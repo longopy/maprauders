@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
 
 export default defineConfig({
+  base: "https://longopy.github.io/maprauders/",
   build: {
     outDir: "build",
     rollupOptions: {

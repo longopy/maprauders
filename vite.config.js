@@ -9,6 +9,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, "index.html"),
         space_port: resolve(__dirname, "maps/space-port.html"),
+        asteroid_mine: resolve(__dirname, "maps/asteroid-mine.html"),
       },
     },
   },

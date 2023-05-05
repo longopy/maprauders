@@ -9,7 +9,7 @@
 
 * {
   font-size: 100%;
-  font-family: Montserrat;
+  font-family: Montserrat !important;
   font-size: 14px;
  }
 

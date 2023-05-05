@@ -20,7 +20,7 @@ $(function () {
   });
   $(".tag-child-btn").on("click", function () {
     const siblings = $(this).parent().parent().find(".tag-child-btn")
-    const parent = $(this).parent().parent().find(".tag-btn");
+    const parent = $(this).parent().parent().parent().find(".tag-btn");
      if ($(this).hasClass("selected")) {
         $(this).removeClass("selected").addClass("unselected");
         if (siblings.filter(".selected").length == 0) {

@@ -14,4 +14,5 @@
 
 .menu-item {
     max-width: 350px;
+    color: var(--text-color);
 }

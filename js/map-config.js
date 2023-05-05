@@ -95,7 +95,7 @@ export default class MapConfig {
   }
   createIcon(src, width, height) {
     return new Icon({
-      anchor: [0.5, 65],
+      anchor: [0.5, 45.5],
       anchorXUnits: "fraction",
       anchorYUnits: "pixels",
       src: src,
@@ -222,6 +222,7 @@ export default class MapConfig {
     this.popupInfo = new Overlay({
       element: document.getElementById("popup-info"),
       positioning: "bottom-center",
+      offset: [1, 0],
       stopEvent: false,
     });
     this.map.addOverlay(this.popupInfo);
@@ -294,7 +295,7 @@ export default class MapConfig {
     const popoverInfoClose = document.getElementById("popover-info-close");
     this.handlePopoverClick = this.handlePopoverClick.bind(this);
     popoverInfoClose.addEventListener("click", this.handlePopoverClick);
-    this.modalImg = new ModalImg(feature.get("imgSrc", undefined));
+    this.modalImg = new ModalImg(feature.get("imgSrc"));
     this.modalImg.prepareModal();
   }
   handlePopoverClick(e) {

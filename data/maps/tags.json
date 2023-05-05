@@ -98,8 +98,8 @@
         }
       },
       {
-        "id": "air_lock",
-        "iconName": "air_lock.svg",
+        "id": "airlock",
+        "iconName": "airlock.svg",
         "name": {
           "en": "Air lock",
           "es": "Exclusa de aire"

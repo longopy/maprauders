@@ -30,10 +30,17 @@ a:hover {
   color: var(--accent-color) !important;
 }
 
+.header {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
 .accent-color {
   color: var(--accent-color);
 }
-
 
 .card-img-header > div {
   position: absolute;
@@ -53,8 +60,7 @@ a:hover {
     border: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    width: 400px;
-    max-height: 421px;
+    max-height: 420px;
   }
 
 @keyframes fadeIn {

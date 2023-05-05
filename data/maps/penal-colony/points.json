@@ -1,0 +1,478 @@
+[
+  {
+    "name": {
+      "en": "Airlock GYM - 4D",
+      "es": "Exclusa GYM - 4D"
+    },
+    "imgSrc": "../data/maps/penal-colony/images/airlock_gym_4d.jpg",
+    "iconName": "airlock.svg",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>airlock</a> allows you to escape from the map by using your personal ship. Remember to carry with you the correct <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>Cpt. keycard</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>exclusa de aire</a> permite escapar del mapa haciendo uso de la nave personal. Recuerda llevar contigo la <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>tarjeta de capitán</a> correcta."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-20.02247058579168,74.00713406878067]
+  },
+  {
+    "name": {
+      "en": "Airlock VISIT - 5D",
+      "es": "Exclusa VISITA - 5D"
+    },
+    "imgSrc": "../data/maps/penal-colony/images/airlock_visit_5d.png",
+    "iconName": "airlock.svg",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>airlock</a> allows you to escape from the map by using your personal ship. Remember to carry with you the correct <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>Cpt. keycard</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>exclusa de aire</a> permite escapar del mapa haciendo uso de la nave personal. Recuerda llevar contigo la <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>tarjeta de capitán</a> correcta."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-63.31436432422991,46.63485744996686]
+  },
+  {
+    "name": {
+      "en": "Airlock CANTEEN - 3C",
+      "es": "Exclusa CANTINA - 3C"
+    },
+    "iconName": "airlock.svg",
+    "imgSrc": "../data/maps/penal-colony/images/airlock_canteen_3c.png",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>airlock</a> allows you to escape from the map by using your personal ship. Remember to carry with you the correct <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>Cpt. keycard</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>exclusa de aire</a> permite escapar del mapa haciendo uso de la nave personal. Recuerda llevar contigo la <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>tarjeta de capitán</a> correcta."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-94.55531409976264,26.12727167855549]
+  },
+  {
+    "name": {
+      "en": "Airlock WORKSHOP - 2B",
+      "es": "Exclusa TALLER - 2B"
+    },
+    "iconName": "airlock.svg",
+    "imgSrc": "../data/maps/penal-colony/images/airlock_workshop_2b.png",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>airlock</a> allows you to escape from the map by using your personal ship. Remember to carry with you the correct <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>Cpt. keycard</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>exclusa de aire</a> permite escapar del mapa haciendo uso de la nave personal. Recuerda llevar contigo la <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>tarjeta de capitán</a> correcta."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-35.2846644975,-65.84754557543042]
+  },
+  {
+    "name": {
+      "en": "Airlock LIBRARY - 1A",
+      "es": "Exclusa BIBLIOTECA - 1A"
+    },
+    "iconName": "airlock.svg",
+    "imgSrc": "../data/maps/penal-colony/images/airlock_library_1a.png",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>airlock</a> allows you to escape from the map by using your personal ship. Remember to carry with you the correct <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>Cpt. keycard</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>exclusa de aire</a> permite escapar del mapa haciendo uso de la nave personal. Recuerda llevar contigo la <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>tarjeta de capitán</a> correcta."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [39.22444810124829,31.052705082355573]
+  },
+  {
+    "name": {
+      "en": "Escape Pod",
+      "es": "Cápsula de escape"
+    },
+    "iconName": "escape_pod.svg",
+    "imgSrc": "../data/maps/penal-colony/images/escape_pod.png",
+    "description": {
+      "en": "<a target='_blank' href='https://marauders.fandom.com/wiki/Escape_Pod'>Escape pod</a> not only allows you to escape from the map, but also to board other ships. Be careful, this is a rather dangerous means of transportation due to the fragility of the capsule.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Escape_Pod'>cápsula de escape</a> además de permitirte escapar del mapa también permite abordar otras naves. Ten cuidado, se trata de un medio de transporte bastante peligroso debido a la fragilidad de la cápsula."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [73.99366102406464,35.92801300957194]
+  },
+  {
+    "name": {
+      "en": "Escape Pod",
+      "es": "Cápsula de escape"
+    },
+    "iconName": "escape_pod.svg",
+    "imgSrc": "../data/maps/penal-colony/images/escape_pod.png",
+    "description": {
+      "en": "<a target='_blank' href='https://marauders.fandom.com/wiki/Escape_Pod'>Escape pod</a> not only allows you to escape from the map, but also to board other ships. Be careful, this is a rather dangerous means of transportation due to the fragility of the capsule.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Escape_Pod'>cápsula de escape</a> además de permitirte escapar del mapa también permite abordar otras naves. Ten cuidado, se trata de un medio de transporte bastante peligroso debido a la fragilidad de la cápsula."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-19.74119002159602,36.023257874580445]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash",
+      "es": "Alijo Oculto"
+    },
+    "iconName": "hidden_stash.svg",
+    "imgSrc": "../data/maps/penal-colony/images/hidden_stash_canteen.png",
+    "description": {
+      "en": "Hidden stashes may contain valuable items. On some maps it will be difficult to find them.",
+      "es": "Los alijos ocultos pueden contener objetos de valor. En algunos mapas te será complicado encontrarlos."
+    },
+    "category": "loot",
+    "tag": "hidden_stash",
+    "position": [-42.3232736165151,-3.844005500370308]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash",
+      "es": "Alijo Oculto"
+    },
+    "iconName": "hidden_stash.svg",
+    "imgSrc": "../data/maps/penal-colony/images/hidden_stash_visitation.png",
+    "description": {
+      "en": "Hidden stashes may contain valuable items. On some maps it will be difficult to find them.",
+      "es": "Los alijos ocultos pueden contener objetos de valor. En algunos mapas te será complicado encontrarlos."
+    },
+    "category": "loot",
+    "tag": "hidden_stash",
+    "position": [-50.13572837435984,45.30044487554489]
+  },
+  {
+    "name": {
+      "en": "Hidden Stash",
+      "es": "Alijo Oculto"
+    },
+    "iconName": "hidden_stash.svg",
+    "imgSrc": "../data/maps/penal-colony/images/hidden_stash_cells.png",
+    "description": {
+      "en": "Hidden stashes may contain valuable items. On some maps it will be difficult to find them.",
+      "es": "Los alijos ocultos pueden contener objetos de valor. En algunos mapas te será complicado encontrarlos."
+    },
+    "category": "loot",
+    "tag": "hidden_stash",
+    "position": [65.8863561909403,-16.685600324733667]
+  },
+  {
+    "name": {
+      "en": "Vault",
+      "es": "Bóveda"
+    },
+    "iconName": "vault.svg",
+    "imgSrc": "../data/maps/penal-colony/images/vault.png",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Vault'>vault</a> may contain objects of great value, such as a <a target='_blank' href='https://marauders.fandom.com/wiki/Gold_Bullion'>gold bullion</a>, one of the most precious goods. To open it, you will need a <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>blowtorch</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Vault'>bóveda</a> puede contener objetos de gran valor, como un <a target='_blank' href='https://marauders.fandom.com/wiki/Gold_Bullion'>lingote de oro</a>, uno de los bienes más preciados. Para abrirla necesitarás un <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>soplete</a>."
+    },
+    "category": "loot",
+    "tag": "vault",
+    "position": [61.84225731920547,-28.497135964741357]
+  },
+  {
+    "name": {
+      "en": "Blocked access",
+      "es": "Acceso bloqueado"
+    },
+    "iconName": "blocked_access.svg",
+    "imgSrc": "../data/maps/penal-colony/images/blocked_access_maintenance1.png",
+    "description": {
+      "en": "In the blocked accesses you will be able to find valuable items such as <a target='_blank' href='https://marauders.fandom.com/wiki/Jewellery_Box'>jewelry boxes</a>, <a target='_blank' href='https://marauders.fandom.com/wiki/War_Bonds'>war bonds</a> or materials. To open them you will have to use a <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>lockpick</a>.",
+      "es": "En los accesos bloqueados podrás encontrar objetos de valor como <a target='_blank' href='https://marauders.fandom.com/wiki/Jewellery_Box'>joyeros</a>, <a target='_blank' href='https://marauders.fandom.com/wiki/War_Bonds'>bonos de guerra</a> o materiales. Para abrirlos tendrás que usar una <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>ganzúa</a>."
+    },
+    "category": "loot",
+    "tag": "blocked_access",
+    "position": [20.036535251591374,4.210850966206042]
+  },
+  {
+    "name": {
+      "en": "Blocked access",
+      "es": "Acceso bloqueado"
+    },
+    "iconName": "blocked_access.svg",
+    "imgSrc": "../data/maps/penal-colony/images/blocked_access_maintenance2.png",
+    "description": {
+      "en": "In the blocked accesses you will be able to find valuable items such as <a target='_blank' href='https://marauders.fandom.com/wiki/Jewellery_Box'>jewelry boxes</a>, <a target='_blank' href='https://marauders.fandom.com/wiki/War_Bonds'>war bonds</a> or materials. To open them you will have to use a <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>lockpick</a>.",
+      "es": "En los accesos bloqueados podrás encontrar objetos de valor como <a target='_blank' href='https://marauders.fandom.com/wiki/Jewellery_Box'>joyeros</a>, <a target='_blank' href='https://marauders.fandom.com/wiki/War_Bonds'>bonos de guerra</a> o materiales. Para abrirlos tendrás que usar una <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>ganzúa</a>."
+    },
+    "category": "loot",
+    "tag": "blocked_access",
+    "position": [-55.49166318309706,6.297013601974205]
+  },
+  {
+    "name": {
+      "en": "Blocked resource box",
+      "es": "Caja de recursos bloqueada"
+    },
+    "iconName": "blocked_resource_box.svg",
+    "description": {
+      "en": "In the locked resource boxes you will be able to find materials and if you are lucky more valuable items like the <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>blowtorch</a>. To open it you will have to use a <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>lockpick</a>.",
+      "es": "En las cajas de recursos bloqueadas podrás encontrar materiales y si tienes suerte objetos más valiosos como el <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>soplete</a>. Para abrirla tendrás que usar una <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>ganzúa</a>."
+    },
+    "category": "loot",
+    "tag": "blocked_resource_box",
+    "position": [-18.53077708069911,31.515975396193674]
+  },
+  {
+    "name": {
+      "en": "Blocked resource box",
+      "es": "Caja de recursos bloqueada"
+    },
+    "iconName": "blocked_resource_box.svg",
+    "description": {
+      "en": "In the locked resource boxes you will be able to find materials and if you are lucky more valuable items like the <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>blowtorch</a>. To open it you will have to use a <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>lockpick</a>.",
+      "es": "En las cajas de recursos bloqueadas podrás encontrar materiales y si tienes suerte objetos más valiosos como el <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>soplete</a>. Para abrirla tendrás que usar una <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>ganzúa</a>."
+    },
+    "category": "loot",
+    "tag": "blocked_resource_box",
+    "position": [75.17580568554031,31.17797172152834]
+  },
+  {
+    "name": {
+      "en": "Blocked resource box",
+      "es": "Caja de recursos bloqueada"
+    },
+    "iconName": "blocked_resource_box.svg",
+    "description": {
+      "en": "In the locked resource boxes you will be able to find materials and if you are lucky more valuable items like the <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>blowtorch</a>. To open it you will have to use a <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>lockpick</a>.",
+      "es": "En las cajas de recursos bloqueadas podrás encontrar materiales y si tienes suerte objetos más valiosos como el <a target='_blank' href='https://marauders.fandom.com/wiki/Blow_Torch'>soplete</a>. Para abrirla tendrás que usar una <a target='_blank' href='https://marauders.fandom.com/wiki/Lockpick'>ganzúa</a>."
+    },
+    "category": "loot",
+    "tag": "blocked_resource_box",
+    "position": [-17.567944429058386,4.1547513351669565]
+  },
+  {
+    "name": {
+      "en": "Medic kit",
+      "es": "Botiquín"
+    },
+    "iconName": "medic_kit.svg",
+    "category": "loot",
+    "tag": "medic_kit",
+    "position": [-36.00953244117922,-19.77165666443532]
+  },
+  {
+    "name": {
+      "en": "Medic kit",
+      "es": "Botiquín"
+    },
+    "iconName": "medic_kit.svg",
+    "category": "loot",
+    "tag": "medic_kit",
+    "position": [-30.15155536659083,44.21997259396159]
+  },
+  {
+    "name": {
+      "en": "Medic kit",
+      "es": "Botiquín"
+    },
+    "iconName": "medic_kit.svg",
+    "category": "loot",
+    "tag": "medic_kit",
+    "position": [15.485670894176138,6.214132166573197]
+  },
+  {
+    "name": {
+      "en": "Medic kit",
+      "es": "Botiquín"
+    },
+    "iconName": "medic_kit.svg",
+    "category": "loot",
+    "tag": "medic_kit",
+    "position": [  -51.594974381828514,6.289502289614088]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [-55.207747781026484,8.501231244348977]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [59.28174971707392,-18.121404830352]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [79.05102321367524,-29.079774159289677]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [34.85157028389662,9.04990172986277]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [12.969045352149521,8.382651820637824]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [15.549245133894315,30.230795734461157]
+  },
+  {
+    "name": {
+      "en": "Ammo box",
+      "es": "Caja de Munición"
+    },
+    "iconName": "ammo.svg",
+    "category": "loot",
+    "tag": "ammo",
+    "position": [-57.17308229520255,34.2983074671014]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [-30.126046003186723,46.08885074442652]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [-35.371902583795304,49.08307397746196]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [-44.753249580790715,39.692952271680625]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [-11.414161606820844,-18.443934594955017]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [34.59580796550388,7.556492444942318]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [67.92934795279123,-26.37744559605137]
+  },
+  {
+    "name": {
+      "en": "Locker",
+      "es": "Taquilla"
+    },
+    "iconName": "container.svg",
+    "category": "loot",
+    "tag": "container",
+    "position": [74.70976518,3.225994897672205]
+  },
+  {
+    "name": {
+      "en": "Prisoners of War",
+      "es": "Prisioneros de Guerra"
+    },
+    "description":{
+      "en": "'The Central Empire’s forces have been captured and detained in some of the UA's penal colonies, find and examine their head of security prisoner manifest so they can be located.' Interact with the Prisoner Manifest for 3 seconds",
+      "es": "'Las fuerzas del Imperio Central han sido capturadas y detenidas en algunas de las colonias penales de la UA, encuentra y examina el manifiesto de prisioneros de su jefe de seguridad para poder localizarlos'. Interactúa con el Manifiesto de Prisioneros durante 3 segundos"
+    },
+    "iconName": "faction_mission.svg",
+    "imgSrc": "../data/maps/penal-colony/images/mission_prisioners_of_war.png",
+    "category": "mission",
+    "tag": "faction_mission",
+    "position": [78.92751634019716,-29.400468026214277]
+  },
+  {
+    "name": {
+      "en": "Prison Break",
+      "es": "Fuga de la prisión"
+    },
+    "description":{
+      "en": "The Penal Colony Armory is located on the third floor of the complex, accessible only through the central tower. It is the area that constitutes the lockers and the entrance to the vault, near the Main Security Office and the Control Post. Stay there for 2 minutes.",
+      "es": "La Armería de la Colonia Penal se encuentra en la tercera planta del complejo, accesible únicamente por la torre central. Es la zona que constituyen las taquillas y la entrada a la cámara acorazada, cerca de la Oficina Principal de Seguridad y del Puesto de Control. Permanecer allí 2 minutos."
+    },
+    "iconName": "faction_mission.svg",
+    "imgSrc": "../data/maps/penal-colony/images/mission_prison_break.png",
+    "category": "mission",
+    "tag": "faction_mission",
+    "position": [62.94025744728154,-27.605141214567457]
+  },
+  {
+    "name": {
+      "en": "Dead body",
+      "es": "Cadáver"
+    },
+    "description":{
+      "en": "In them you can find valuable objects, such as the <a target='_blank' href='https://marauders.fandom.com/wiki/Penal_Colony_Token'>penal colony token</a>.",
+      "es": "En ellos puedes encontrar objetos de valor, como la <a target='_blank' href='https://marauders.fandom.com/wiki/Penal_Colony_Token'>llave de la prisión</a>."
+    },
+    "iconName": "dead_body.svg",
+    "category": "loot",
+    "tag": "dead_body",
+    "position": [74.16398448476002,-27.777955375980127]
+  },
+  {
+    "name": {
+      "en": "Depot",
+      "es": "Almacén"
+    },
+    "description":{
+      "en": "In it you can find valuables. It is located between two narrow corridors, near the library and the metal detectors. To open it you need to use the <a target='_blank' href='https://marauders.fandom.com/wiki/Penal_Colony_Token'>penal colony token</a>.",
+      "es": "En él puedes encontrar objetos de valor. Se encuentra entre dos pasillos estrechos, cerca de la biblioteca y de los detectores de metales. Para abrirlo necesitas usar la <a target='_blank' href='https://marauders.fandom.com/wiki/Penal_Colony_Token'>llave de la prisión</a>. "
+    },
+    "iconName": "depot.svg",
+    "imgSrc": "../data/maps/penal-colony/images/depot.png",
+    "category": "loot",
+    "tag": "depot",
+    "position": [0.7348559267161363,34.322012781802485]
+  }
+]

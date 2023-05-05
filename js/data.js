@@ -138,15 +138,15 @@ class MenuData {
       <button class="btn p-0 rounded h-100" onclick="window.location.href='./maps/${
         map["id"]
       }.html'">
-        <div class="card h-100">
-          <img class="card-img-top" src="./data/maps/${map["id"]}/${
+        <div class="card h-100 menu-item">
+          <img class="menu-img" src="./data/maps/${map["id"]}/${
         map["cardImgSrc"]
       }" alt="${map["name"][this.lang]}">
           <div class="card-body">
-            <h4 class="card-title text-uppercase fw-ligh">${
+            <h4 class="card-title text-uppercase fw-ligh menu-title">${
               map["name"][this.lang]
             }</h4>
-            <h4><span class="badge bg-white text-black text-uppercase fw-ligh">${
+            <h4><span class="badge bg-white text-black text-uppercase fw-ligh menu-alias">${
               map["alias"][this.lang]
             }</span></h4>
             ${

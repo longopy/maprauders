@@ -26,7 +26,7 @@ import { Vector as VectorLayer, Layer } from "ol/layer.js";
 import VectorSource from "ol/source/Vector.js";
 import { Icon, Style, Fill, Stroke, Text } from "ol/style.js";
 import { defaults as interactionDefaults } from "ol/interaction.js";
-import {composeCssTransform} from 'ol/transform.js';
+import {composeCssTransform, rotate} from 'ol/transform.js';
 import { transform } from "ol/proj";
 
 export default class MapConfig {
@@ -68,12 +68,14 @@ export default class MapConfig {
     const path = `../data/icons/points/${iconName}`;
     return new Style({
       image: this.createIcon(path, 32.2, 45.5),
+      zIndex: 1,
     });
   }
   getIconStyleOnHover(iconName) {
     const path = `../data/icons/points/${iconName}`;
     return new Style({
       image: this.createIcon(path, 46, 65),
+      zIndex: 2,
     });
   }
   createPoint(point) {
@@ -115,11 +117,11 @@ export default class MapConfig {
       text: new Text({
         font: `small-caps ${label["size"]}px Montserrat, sans-serif`,
         fill: new Fill({
-          color: "#fff",
+          color: label["fillColor"],
         }),
         stroke: new Stroke({
           color: label["outlineColor"],
-          width: 10,
+          width: label["outlineWidth"],
         }),
         rotation: label["rotation"] * (Math.PI / 180),
       }),

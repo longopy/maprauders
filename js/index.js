@@ -1,6 +1,7 @@
 // Styles
 import "../dist/bootstrap/bootstrap.min.css";
 import "../css/main.css";
+import "../css/menu.css";
 
 // Bootstrap
 import * as bootstrap from "bootstrap";

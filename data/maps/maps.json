@@ -1,46 +1,24 @@
 [
   {
-    "id": "asteroid-mine",
+    "id": "penal-colony",
     "name": {
-      "en": "Asteroide mine Delta-X9",
-      "es": "Mina de asteroides Delta-X9"
+      "en": "Penal Colony Beta 5",
+      "es": "Colonia Penal Beta 5"
     },
     "alias": {
-      "en": "Asteroid mine",
-      "es": "Mina de asteroides"
+      "en": "Prison",
+      "es": "Prisión"
     },
     "cardImgSrc": "cardImg.png",
     "mapImgSrc": "mapImg.svg",
-    "resolution": [2560, 1080],
-    "padding": "50px 65px 0px 65px",
+    "resolution": [2048, 1080],
+    "padding": "120px 65px 0px 400px",
     "zoom": 1,
     "minZoom": 1,
     "maxZoom": 7,
     "description": {
-      "en": "A mine belonging to the United Allies, which contained rebel cells to the three main factions, would be invaded by the Raiders.",
-      "es": "Mina perteneciente a los Aliados Unidos que conteniendo células rebeldes a las tres facciones principales, sería invadida por los Asaltantes."
-    }
-  },
-  {
-    "id": "space-port",
-    "name": {
-      "en": "L1812 Service Space Station",
-      "es": "L1812 Estación espacial de servicio"
-    },
-    "alias": {
-      "en": "Space Port",
-      "es": "Estación espacial"
-    },
-    "cardImgSrc": "cardImg.png",
-    "mapImgSrc": "mapImg.svg",
-    "resolution": [2560, 1080],
-    "padding": "50px 65px 0px 65px",
-    "zoom": 1,
-    "minZoom": 1,
-    "maxZoom": 7,
-    "description": {
-      "en": "A large spaceport. It used to be a thriving place until it was attacked because of its highly valuable bank vault.",
-      "es": "Un gran puerto espacial. Solía ser un lugar próspero hasta que fue atacado por su valiosa bóveda bancaria."
+      "en": "A self sufficient labour prison facility, a fortress filled with the most dangerous criminals in the galaxy.",
+      "es": "Una prisión de trabajo autosuficiente, una fortaleza llena de los criminales más peligrosos de la galaxia."
     }
   }
 ]

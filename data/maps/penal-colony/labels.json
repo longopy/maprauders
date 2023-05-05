@@ -1,0 +1,434 @@
+[
+  {
+    "name": {
+      "en": "Level 0",
+      "es": "Nivel 0"
+    },
+    "size": 18,
+    "fillColor": "#8264c4",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-35.8593755, -77.20220322380128]
+  },
+  {
+    "name": {
+      "en": "Level 1",
+      "es": "Nivel 1"
+    },
+    "size": 18,
+    "fillColor": "#a6c464",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-19.3359375, -77.20220322380128]
+  },
+  {
+    "name": {
+      "en": "Level 2",
+      "es": "Nivel 2"
+    },
+    "size": 18,
+    "fillColor": "#af4661",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-2.63671875, -77.20220322380128]
+  },
+  {
+    "name": {
+      "en": "Level 3",
+      "es": "Nivel 3"
+    },
+    "size": 18,
+    "fillColor": "#a6c464",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [75.234375, -77.20220322380128]
+  },
+  {
+    "name": {
+      "en": "CANTEEN",
+      "es": "CANTINA"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-74.35546875, 8.453958328727893]
+  },
+  {
+    "name": {
+      "en": "KITCHEN",
+      "es": "COCINA"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-77.63088436067166, 27.4182196304545]
+  },
+  {
+    "name": {
+      "en": "SECURITY",
+      "es": "SEGURIDAD"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-57.63686974948061,33.648813526679895]
+  },
+  {
+    "name": {
+      "en": "VISITATION",
+      "es": "VISITAS"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-56.07421875, 47.82101292865236]
+  },
+  {
+    "name": {
+      "en": "GYM",
+      "es": "GYM"
+    },
+    "size": 14,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-20.0390625, 58.541505475953215]
+  },
+  {
+    "name": {
+      "en": "GYM LOCKERS",
+      "es": "TAQUILLAS GYM"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 90,
+    "position": [-37.6171875, 47.46952136972446]
+  },
+  {
+    "name": {
+      "en": "STAFF",
+      "es": "PERSONAL"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-53.110487596136586, 7.548493910252223]
+  },
+  {
+    "name": {
+      "en": "STAFF",
+      "es": "PERSONAL"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [17.053978579149977,7.402298996795373]
+  },
+  {
+    "name": {
+      "en": "SECURITY",
+      "es": "SEGURIDAD"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 90,
+    "position": [17.889454290679208,33.37108526106494]
+  },
+  {
+    "name": {
+      "en": "LIBRARY",
+      "es": "BIBLIOTECA"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [29.332502163072284, 8.096606559968372]
+  },
+  {
+    "name": {
+      "en": "UTILITY",
+      "es": "UTILIDADES"
+    },
+    "size": 9,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [11.970801740142711, 24.18444953245952]
+  },
+  {
+    "name": {
+      "en": "DORMS",
+      "es": "DORMITORIOS"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": -45,
+    "position": [15.916995410104391, -13.593349874600975]
+  },
+  {
+    "name": {
+      "en": "SECURITY",
+      "es": "SEGURIDAD"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-14.492247979062341, -20.051943421078832]
+  },
+  {
+    "name": {
+      "en": "MAIN MILL",
+      "es": "MOLINO PRINCIPAL"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-40.25390625, -36.88845277297084]
+  },
+  {
+    "name": {
+      "en": "SIDE MILL",
+      "es": "MOLINO SECUNDARIO"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-10.121236315739687, -31.65996832997177]
+  },
+  {
+    "name": {
+      "en": "LAUNDRY",
+      "es": "LAVANDERÍA"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 90,
+    "position": [-24.9609375, -36.88845277297084]
+  },
+  {
+    "name": {
+      "en": "CHECKPOINT",
+      "es": "PUNTO DE CONTROL"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 45,
+    "position": [52.228515625, -15.62321345783306]
+  },
+  {
+    "name": {
+      "en": "HEAD SEC OFFICE",
+      "es": "OFICINA CENTRAL\nSEGURIDAD"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 45,
+    "position": [83.73022051404244, -30.83982364464802]
+  },
+  {
+    "name": {
+      "en": "BUNKS",
+      "es": "LITERAS"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 45,
+    "position": [71.3671875, -30.91309627119658]
+  },
+  {
+    "name": {
+      "en": "BREAK",
+      "es": "DESCANSO"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 45,
+    "position": [73.74613349146973,-29.159655329641478]
+  },
+  {
+    "name": {
+      "en": "BUNKS",
+      "es": "LITERAS"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 45,
+    "position": [71.3671875, -30.91309627119658]
+  },
+  {
+    "name": {
+      "en": "STAFF LOCKERS",
+      "es": "TAQUILLAS\nPERSONAL"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": -45,
+    "position": [66.9828994283545, -24.64832477737432]
+  },
+  {
+    "name": {
+      "en": "CENTRAL TOWER",
+      "es": "TORRE CENTRAL"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [73.828125, 10.738653461759228]
+  },
+  {
+    "name": {
+      "en": "CENTRAL TOWER",
+      "es": "TORRE CENTRAL"
+    },
+    "size": 10,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-19.6875,10.914399241223165]
+  },
+  {
+    "name": {
+      "en": "CELL BLOCK\nLEVEL 3",
+      "es": "BLOQUE DE CELDAS\n NIVEL 3"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 10,
+    "position": [69.45231754041794,-5.164064030553362]
+  },
+  {
+    "name": {
+      "en": "CELL BLOCK\nLEVEL 1",
+      "es": "BLOQUE DE CELDAS\n NIVEL 1"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 90,
+    "position": [-35.91421885147737,8.391440613466422]
+  },
+  {
+    "name": {
+      "en": "CELL BLOCK\nLEVEL 2",
+      "es": "BLOQUE DE CELDAS\n NIVEL 2"
+    },
+    "size": 12,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 90,
+    "position": [-4.615031050245435,7.269735830065315]
+  },
+  {
+    "name": {
+      "en": "WORKSHOP",
+      "es": "TALLER"
+    },
+    "size": 12,
+    "fillColor": "#facd45",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-19.954557418879038,-13.767494357430232]
+  },
+  {
+    "name": {
+      "en": "CANTEEN",
+      "es": "CANTINA"
+    },
+    "size": 12,
+    "fillColor": "#facd45",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 90,
+    "position": [-40.65133740677375,7.789285219779417]
+  },
+  {
+    "name": {
+      "en": "VISITATION",
+      "es": "VISITAS"
+    },
+    "size": 12,
+    "fillColor": "#facd45",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": -45,
+    "position": [-33.79496476126978,21.979108068999473]
+  },
+  {
+    "name": {
+      "en": "GYM",
+      "es": "GYM"
+    },
+    "size": 12,
+    "fillColor": "#facd45",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-19.951171875000014,27.698121180030256]
+  },
+  {
+    "name": {
+      "en": "ARRIVALS",
+      "es": "LLEGADAS"
+    },
+    "size": 12,
+    "fillColor": "#facd45",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 45,
+    "position": [-5.823980131967176,22.01533396061229]
+  }
+]

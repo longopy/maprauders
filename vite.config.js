@@ -8,8 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        space_port: resolve(__dirname, "maps/space-port.html"),
-        asteroid_mine: resolve(__dirname, "maps/asteroid-mine.html"),
+        penal_colony: resolve(__dirname, "maps/penal-colony.html")
       },
     },
   },

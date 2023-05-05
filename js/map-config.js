@@ -294,7 +294,7 @@ export default class MapConfig {
     const popoverInfoClose = document.getElementById("popover-info-close");
     this.handlePopoverClick = this.handlePopoverClick.bind(this);
     popoverInfoClose.addEventListener("click", this.handlePopoverClick);
-    this.modalImg = new ModalImg(feature.get("imgSrc"));
+    this.modalImg = new ModalImg(feature.get("imgSrc", undefined));
     this.modalImg.prepareModal();
   }
   handlePopoverClick(e) {

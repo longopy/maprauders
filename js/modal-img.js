@@ -4,8 +4,10 @@ export default class ModalImg {
   constructor(imgUrl) {
     this.modal = $("#modal-img");
     this.imgUrl = imgUrl;
-    this.updateModalImgSource();
-    return this;
+    if (this.imgUrl != undefined){
+      this.updateModalImgSource();
+      return this;
+    }
   }
   updateModalImgSource() {
     const modalImg = document.getElementById("modal-img-fs");

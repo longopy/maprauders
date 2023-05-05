@@ -49,6 +49,7 @@ export default class MapConfig {
   }
   loadMap() {
     this.map = new Map({
+      renderer: "webgl",
       layers: this.loadLayers(),
       pixelRatio: 1,
       target: document.getElementById("map"),

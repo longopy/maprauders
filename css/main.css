@@ -9,7 +9,7 @@
 
 * {
   font-size: 100%;
-  font-family: Montserrat !important;
+  font-family: Montserrat, sans-serif !important;
   font-size: 14px;
  }
 
@@ -17,8 +17,8 @@ html,
 body {
   margin: 0;
   height: 100%;
-  background-color: var(--body-background-color);
-  color: --var(--body-background-color);
+  background-color: var(--body-background-color) !important;
+  color: var(--body-background-color) !important;
 }
 
 li,

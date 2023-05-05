@@ -9,9 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        penal_colony: resolve(__dirname, "maps/penal-colony.html"),
         attributions_en: resolve(__dirname, "en/attributions.html"),
         attributions_es: resolve(__dirname, "es/attributions.html"),
+        penal_colony: resolve(__dirname, "maps/penal-colony.html"),
       },
     },
   },

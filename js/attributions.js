@@ -1,5 +1,5 @@
 // Styles
-import "../css/attributions.css"
+import "../css/attributions.css";
 
 import $ from "jquery";
 

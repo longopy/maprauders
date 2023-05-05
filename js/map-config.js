@@ -128,7 +128,6 @@ export default class MapConfig {
     });
   }
   createLabel(label) {
-    console.log(label["name"].toUpperCase());
     const labelFeature = new Feature({
       geometry: new Point(label["position"]),
       name: label["name"],
@@ -246,11 +245,7 @@ export default class MapConfig {
     document.getElementById("hud").style.display = "block";
   }
   createPopupName(feature) {
-    let position = feature.getGeometry().getCoordinates()
-    console.log(`position: ${position}`)
-    console.log(`center: ${getCenter(feature.getGeometry().getExtent())}`)
-    position[1] = position[1] + 0.3
-    this.popupName.setPosition(position);
+    this.popupName.setPosition(feature.getGeometry().getCoordinates());
     const popupContainer = document.getElementById("popup-name");
     this.popoverName = new bootstrap.Popover(popupContainer, {
       container: "body",
@@ -315,7 +310,8 @@ export default class MapConfig {
     }
   }
   handleMapClick(e) {
-    navigator.clipboard.writeText(e.coordinate);
+    // TODO: Copy coordinates to clipboard
+    //navigator.clipboard.writeText(e.coordinate);
     const feature = this.map.forEachFeatureAtPixel(e.pixel, function (feature) {
       return feature;
     });

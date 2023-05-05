@@ -10,12 +10,11 @@
     },
     "devDependencies": {
         "sass": "^1.59.2",
-        "vite": "^4.2.1",
-        "vite-plugin-static-copy": "^0.14.0"
+        "vite": "^4.2.1"
     },
     "scripts": {
         "start": "vite",
-        "build": "vite build",
+        "build": "vite build && cp data/* -r build/data/",
         "preview": "vite preview"
     }
 }

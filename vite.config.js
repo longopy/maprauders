@@ -1,7 +1,6 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import vitePluginFaviconsInject from "vite-plugin-favicons-inject";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   build: {
@@ -21,13 +20,5 @@ export default defineConfig({
   },
   plugins: [
     vitePluginFaviconsInject("./favicon.ico"),
-    viteStaticCopy({
-      targets: [
-        {
-          src: "./data",
-          dest: "data",
-        },
-      ],
-    }),
   ],
 });

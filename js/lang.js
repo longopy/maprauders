@@ -15,7 +15,7 @@ function detectLanguage() {
 function loadLangButton() {
     const langBtn = document.getElementById('lang-btn');
     const lang = getTheOtherOption();
-    langBtn.src=`${import.meta.env.BASE_URL}/data/lang/${lang}.svg`;
+    langBtn.innerHTML = lang.toUpperCase();
 }
 
 function getTheOtherOption(){

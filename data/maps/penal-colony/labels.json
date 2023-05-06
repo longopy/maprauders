@@ -57,7 +57,7 @@
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 0,
-    "position": [-74.35546875, 8.453958328727893]
+    "position": [-74.10271941295935,11.090516351674419]
   },
   {
     "name": {
@@ -69,7 +69,7 @@
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 0,
-    "position": [-77.63088436067166, 27.4182196304545]
+    "position": [-75.79883881148436,27.515779411011472]
   },
   {
     "name": {
@@ -81,7 +81,7 @@
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 0,
-    "position": [-57.63686974948061,33.648813526679895]
+    "position": [-57.64044603867838,34.32029235839481]
   },
   {
     "name": {
@@ -153,7 +153,7 @@
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 90,
-    "position": [17.889454290679208,33.37108526106494]
+    "position": [17.50181141858739,33.501125551592594]
   },
   {
     "name": {
@@ -177,7 +177,7 @@
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 0,
-    "position": [11.970801740142711, 24.18444953245952]
+    "position": [10.987063081253531,23.956804552265744]
   },
   {
     "name": {
@@ -206,26 +206,26 @@
   {
     "name": {
       "en": "MAIN MILL",
-      "es": "MOLINO PRINCIPAL"
+      "es": "MOLINO\n PRINCIPAL"
     },
     "size": 12,
     "fillColor": "#fff",
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 0,
-    "position": [-40.25390625, -36.88845277297084]
+    "position": [-39.47631881835937,-37.535008314685214]
   },
   {
     "name": {
       "en": "SIDE MILL",
-      "es": "MOLINO SECUNDARIO"
+      "es": "MOLINO\nSECUNDARIO"
     },
     "size": 12,
     "fillColor": "#fff",
     "outlineColor": "#000",
     "outlineWidth": 4,
-    "rotation": 0,
-    "position": [-10.121236315739687, -31.65996832997177]
+    "rotation": 90,
+    "position": [-16.921688541662764,-36.13473402569891]
   },
   {
     "name": {
@@ -237,7 +237,7 @@
     "outlineColor": "#000",
     "outlineWidth": 4,
     "rotation": 90,
-    "position": [-24.9609375, -36.88845277297084]
+    "position": [-25.01511382511238,-35.30085808274117]
   },
   {
     "name": {

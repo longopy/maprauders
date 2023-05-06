@@ -326,7 +326,7 @@ export default class MapConfig {
   }
   handleMapClick(e) {
     // TODO: Copy coordinates to clipboard
-    //navigator.clipboard.writeText(e.coordinate);
+    // navigator.clipboard.writeText(e.coordinate);
     const feature = this.map.forEachFeatureAtPixel(e.pixel, function (feature) {
       return feature;
     });

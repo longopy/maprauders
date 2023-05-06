@@ -26,11 +26,20 @@ import { Vector as VectorLayer, Layer } from "ol/layer.js";
 import VectorSource from "ol/source/Vector.js";
 import { Icon, Style, Fill, Stroke, Text } from "ol/style.js";
 import { defaults as interactionDefaults } from "ol/interaction.js";
-import {composeCssTransform, rotate} from 'ol/transform.js';
+import { composeCssTransform, rotate } from "ol/transform.js";
 import { transform } from "ol/proj";
 
 export default class MapConfig {
-  constructor(mapImgSrc, resolution, points, labels, padding, zoom, minZoom, maxZoom) {
+  constructor(
+    mapImgSrc,
+    resolution,
+    points,
+    labels,
+    padding,
+    zoom,
+    minZoom,
+    maxZoom
+  ) {
     this.points = points;
     this.labels = labels;
     this.mapImgSrc = mapImgSrc;
@@ -41,7 +50,7 @@ export default class MapConfig {
     this.resolution = resolution;
     this.extent = [0, 0];
     this.extent = this.extent.concat(this.resolution); // Pixels
-    this.projection = 'EPSG:4326';
+    this.projection = "EPSG:4326";
     this.loadMap();
     this.currentPoints = this.addPoints();
     this.addLabels();
@@ -161,15 +170,15 @@ export default class MapConfig {
   loadVectorLayer() {
     this.vectorSource = new VectorSource();
     this.vectorLayer = new VectorLayer({
-      source: this.vectorSource
+      source: this.vectorSource,
     });
     return this.vectorLayer;
   }
   loadImageMap(svgContainer) {
     fetch(`../map/${this.mapImgSrc}`)
       .then((response) => response.text())
-      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-      .then(svg => svg.documentElement)
+      .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
+      .then((svg) => svg.documentElement)
       .then((svg) => {
         svgContainer.ownerDocument.importNode(svg);
         svgContainer.appendChild(svg);
@@ -208,7 +217,7 @@ export default class MapConfig {
     return this.imageMapLayer;
   }
   loadLayers() {
-    return [this.loadVectorLayer(), this.loadImageMapLayer()]
+    return [this.loadVectorLayer(), this.loadImageMapLayer()];
   }
   loadPopupNameOverlay() {
     this.popupName = new Overlay({
@@ -287,7 +296,11 @@ export default class MapConfig {
       `</div>
     <div class="card-body">
       <h5 class="card-title fw-bold text-uppercase">${feature.get("name")}</h5>
-      ${feature.get("description") != undefined ? `<p class="card-text">${feature.get("description")}</p>` : ""}
+      ${
+        feature.get("description") != undefined
+          ? `<p class="card-text">${feature.get("description")}</p>`
+          : ""
+      }
     </div>
   </div>`
     );
@@ -326,10 +339,10 @@ export default class MapConfig {
     if (feature.values_["type"] != "point") {
       return;
     }
-    this.disposePopover("Info")
+    this.disposePopover("Info");
     this.createPopupInfo(feature);
     this.currentFeature = feature;
-    this.currentFeature.disabled = true
+    this.currentFeature.disabled = true;
     this.checkPopoverInfoClose(feature);
   }
   handleMapPointerMove(e) {
@@ -411,20 +424,28 @@ export default class MapConfig {
     });
   }
   handleTagClick(e) {
-    const activate = e.target.className.includes("unselected");
+    let target = e.target;
+    if (e.target.className.includes("tag-img")) {
+      target = e.target.parentElement;
+    }
+    const activate = target.className.includes("unselected");
     this.currentPoints = this.points.filter((point) => {
-      return point.values_.category == e.target.value;
+      return point.values_.category == target.value;
     });
-    this.removeFeatures(this.currentPoints);
     if (activate) {
       this.addFeatures(this.currentPoints);
+    } else {
+      this.removeFeatures(this.currentPoints);
     }
-    
   }
   handleTagChildClick(e) {
-    const activate = e.target.className.includes("unselected");
+    let target = e.target;
+    if (e.target.className.includes("tag-child-img")) {
+      target = e.target.parentElement;
+    }
+    const activate = target.className.includes("unselected");
     this.currentPoints = this.points.filter((point) => {
-      return point.values_.tag == e.target.value;
+      return point.values_.tag == target.value;
     });
     if (activate) {
       this.addFeatures(this.currentPoints);

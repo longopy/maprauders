@@ -94,14 +94,14 @@ class MapData {
     let card = `<div class="col-12 col-md-6 mb-4">
     <div class="p-2" style="border: 1px solid ${tag['color']}"><button type="button" class="btn selected btn-sm w-100 text-center tag-btn" style="border: 1px solid ${tag['color']}" value="${
       tag["id"]
-    }"><img class="me-2" src="../data/icons/tags/${
+    }"><img class="me-2 tag-img" src="../data/icons/tags/${
       tag["iconName"]
     }" width="25">${tag["name"][this.lang]}</button></th>
      </div><div style="border: 1px solid ${tag['color']}">`;
     const rows = childrenTags.map((child) => {
       return `<div class="p-2"><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
-      }"><img class="me-2" src="../data/icons/tags/${
+      }"><img class="me-2 tag-child-img" src="../data/icons/tags/${
         child["iconName"]
       }" width="25">${child["name"][this.lang]}</button></div>`;
     });

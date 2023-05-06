@@ -422,7 +422,7 @@
       "es": "Prisioneros de Guerra"
     },
     "description":{
-      "en": "'The Central Empire’s forces have been captured and detained in some of the UA's penal colonies, find and examine their head of security prisoner manifest so they can be located.' Interact with the Prisoner Manifest for 3 seconds",
+      "en": "'The Central Empire’s forces have been captured and detained in some of the UA's penal colonies, find and examine their head of security prisoner manifest so they can be located'. Interact with the Prisoner Manifest for 3 seconds",
       "es": "'Las fuerzas del Imperio Central han sido capturadas y detenidas en algunas de las colonias penales de la UA, encuentra y examina el manifiesto de prisioneros de su jefe de seguridad para poder localizarlos'. Interactúa con el Manifiesto de Prisioneros durante 3 segundos"
     },
     "iconName": "faction_mission.svg",
@@ -437,8 +437,8 @@
       "es": "Fuga de la prisión"
     },
     "description":{
-      "en": "The Penal Colony Armory is located on the third floor of the complex, accessible only through the central tower. It is the area that constitutes the lockers and the entrance to the vault, near the Main Security Office and the Control Post. Stay there for 2 minutes.",
-      "es": "La Armería de la Colonia Penal se encuentra en la tercera planta del complejo, accesible únicamente por la torre central. Es la zona que constituyen las taquillas y la entrada a la cámara acorazada, cerca de la Oficina Principal de Seguridad y del Puesto de Control. Permanecer allí 2 minutos."
+      "en": "The Penal Colony Armory is located on the third floor of the complex, accessible only through the central tower. It is the area that constitutes the lockers and the entrance to the <a target='_blank' href='https://marauders.fandom.com/wiki/Vault'>vault</a>, near the Main Security Office and the Control Post. Stay there for 2 minutes.",
+      "es": "La Armería de la Colonia Penal se encuentra en la tercera planta del complejo, accesible únicamente por la torre central. Es la zona que constituyen las taquillas y la entrada a la <a target='_blank' href='https://marauders.fandom.com/wiki/Vault'>bóveda</a>, cerca de la Oficina Principal de Seguridad y del Puesto de Control. Permanecer allí 2 minutos."
     },
     "iconName": "faction_mission.svg",
     "imgSrc": "../data/maps/penal-colony/images/mission_prison_break.png",

@@ -324,9 +324,12 @@ export default class MapConfig {
       this[popoverName] = undefined;
     }
   }
+  copy_coordinates_to_clipboard(coords) {
+    if(localStorage.getItem("edit_mode") == "true")
+      navigator.clipboard.writeText(coords);
+  }
   handleMapClick(e) {
-    // TODO: Copy coordinates to clipboard
-    // navigator.clipboard.writeText(e.coordinate);
+    this.copy_coordinates_to_clipboard(e.coordinate);
     const feature = this.map.forEachFeatureAtPixel(e.pixel, function (feature) {
       return feature;
     });
@@ -339,6 +342,7 @@ export default class MapConfig {
     if (feature.values_["type"] != "point") {
       return;
     }
+    this.copy_coordinates_to_clipboard(feature.getGeometry().getCoordinates());
     this.disposePopover("Info");
     this.createPopupInfo(feature);
     this.currentFeature = feature;

@@ -91,15 +91,15 @@ class MapData {
     return selector;
   }
   generateTagCard(tag, childrenTags) {
-    let card = `<div class="col-12 col-md-6 mb-4">
-    <div class="p-2" style="border: 1px solid ${tag['color']}"><button type="button" class="btn selected btn-sm w-100 text-center tag-btn" style="border: 1px solid ${tag['color']}" value="${
+    let card = `<div style="border: 1px solid ${tag['color']}" class="mb-4 p-0 rounded">
+    <div class="container-fluid p-0"><button type="button" class="btn selected btn-sm w-100 text-center tag-btn" style="border: 1px solid ${tag['color']}" value="${
       tag["id"]
     }"><img class="me-2 tag-img" src="../data/icons/tags/${
       tag["iconName"]
     }" width="25">${tag["name"][this.lang]}</button></th>
-     </div><div style="border: 1px solid ${tag['color']}">`;
+     </div><div class="p-2 row m-2">`;
     const rows = childrenTags.map((child) => {
-      return `<div class="p-2"><button type="button" class="btn selected btn-sm w-100 text-start tag-child-btn" value="${
+      return `<div class="p-2 col-12 col-md-6"><button type="button" class="h-100 btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
       }"><img class="me-2 tag-child-img" src="../data/icons/tags/${
         child["iconName"]

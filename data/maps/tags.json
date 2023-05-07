@@ -33,6 +33,14 @@
         }
       },
       {
+        "id": "purse",
+        "iconName": "purse.svg",
+        "name": {
+          "en": "Purse",
+          "es": "Monedero"
+        }
+      },
+      {
         "id": "dead_body",
         "iconName": "dead_body.svg",
         "name": {

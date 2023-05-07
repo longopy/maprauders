@@ -330,6 +330,10 @@
       "es": "Caja de Munición"
     },
     "iconName": "ammo.svg",
+    "description": {
+      "en": "It can contain ammunition of all types of caliber, <a target='_blank' href='https://marauders.fandom.com/wiki/Ammo_Box'>ammo boxes</a>, and various types of gunpowder: <a target='_blank' href = 'https://marauders.fandom.com/wiki/Gunpowder'>normal gunpowder</a> and <a target='_blank' href = 'https://marauders.fandom.com/wiki/Hi-Grade_Gunpowder'>hi-grade gunpowder</a>.",
+      "es": "Puede contener munición de todo tipo de calibre, <a target='_blank' href='https://marauders.fandom.com/wiki/Ammo_Box'>cajas de munición</a>, y varios tipos de pólvora: <a target='_blank' href = 'https://marauders.fandom.com/wiki/Gunpowder'>pólvora normal</a> y <a target='_blank' href = 'https://marauders.fandom.com/wiki/Hi-Grade_Gunpowder'>pólvora de alto grado</a>."
+    },
     "category": "loot",
     "tag": "ammo",
     "position": [79.05102321367524, -29.079774159289677]

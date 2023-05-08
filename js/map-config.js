@@ -31,23 +31,18 @@ import { transform } from "ol/proj";
 
 export default class MapConfig {
   constructor(
-    mapImgSrc,
-    resolution,
-    points,
-    labels,
-    padding,
-    zoom,
-    minZoom,
-    maxZoom
+    mapInfo, rootPath, mapPoints, mapLabels
   ) {
-    this.points = points;
-    this.labels = labels;
-    this.mapImgSrc = mapImgSrc;
-    this.padding = padding;
-    this.zoom = zoom;
-    this.minZoom = minZoom;
-    this.maxZoom = maxZoom;
-    this.resolution = resolution;
+    this.config = mapInfo;
+    this.rootPath = rootPath;
+    this.points = mapPoints;
+    this.labels = mapLabels;
+    this.mapImgSrc = mapInfo['mapImgSrc'];
+    this.padding = mapInfo['padding'];
+    this.zoom = mapInfo['zoom'];
+    this.minZoom = mapInfo['minZoom'];
+    this.maxZoom = mapInfo['maxZoom'];
+    this.resolution = mapInfo['resolution'];
     this.extent = [0, 0];
     this.extent = this.extent.concat(this.resolution); // Pixels
     this.projection = "EPSG:4326";
@@ -175,7 +170,7 @@ export default class MapConfig {
     return this.vectorLayer;
   }
   loadImageMap(svgContainer) {
-    fetch(`../map/${this.mapImgSrc}`)
+    fetch(`${this.rootPath}/${this.mapImgSrc}`)
       .then((response) => response.text())
       .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
       .then((svg) => svg.documentElement)
@@ -284,12 +279,12 @@ export default class MapConfig {
     const imgContainer = `<a id="modal-img-toggle" role="button">
     <img
       class="card-img-top img-fluid w-100"
-      src="${feature.get("imgSrc")}"
+      src="${this.rootPath}images/${imgSrc}"
       alt="${feature.get("name")}"
     />
     </a>`;
     return (
-      `<div class="card">
+      `<div class="card popup-info-card">
     <div class="card-img-header">
     <div><a href="#" id="popover-info-close" class="close btn-close btn-close-white d-block" data-dismiss="alert"></a></div>` +
       (imgSrc != undefined ? imgContainer : "") +
@@ -309,7 +304,7 @@ export default class MapConfig {
     const popoverInfoClose = document.getElementById("popover-info-close");
     this.handlePopoverClick = this.handlePopoverClick.bind(this);
     popoverInfoClose.addEventListener("click", this.handlePopoverClick);
-    this.modalImg = new ModalImg(feature.get("imgSrc"));
+    this.modalImg = new ModalImg(`${this.rootPath}images/${feature.get("imgSrc")}`);
     this.modalImg.prepareModal();
   }
   handlePopoverClick(e) {

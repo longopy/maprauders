@@ -13,15 +13,10 @@ const mapId = "penal-colony"
 // Map
 const mapInfo = mapsInfo.filter((map) => map.id === mapId)[0];
 const mapData = new MapData(mapInfo, mapPointsData, mapLabelsData);
+const mapRootPath = mapData.getRootPath();
 const mapPoints = mapData.getPoints();
 const mapLabels = mapData.getLabels();
-const mapImgSrc = mapData.getMapImgSrc();
-const resolution = mapData.getResolution();
-const padding = mapData.getPadding();
-const zoom = mapData.getZoom();
-const minZoom = mapData.getMinZoom();
-const maxZoom = mapData.getMaxZoom();
-const mapConfig = new MapConfig(mapImgSrc, resolution, mapPoints, mapLabels, padding, zoom, minZoom, maxZoom);
+const mapConfig = new MapConfig(mapInfo, mapData.rootPath, mapPoints, mapLabels);
 
 // Attributions
 import "../../js/attributions";

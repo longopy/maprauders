@@ -10,10 +10,10 @@ function getLangFromLocalStorage() {
 }
 
 class MapData {
-  constructor(mapInfo, mapPoints, mapLabels) {
-    this.mapInfo = mapInfo;
+  constructor(mapConfig, mapPoints, mapLabels) {
+    this.mapConfig = mapConfig;
     this.tags = tags;
-    this.rootPath = `../data/maps/${this.mapInfo["id"]}/`;
+    this.rootPath = `../data/maps/${this.mapConfig["id"]}/`;
     this.mapPoints = mapPoints;
     this.mapLabels = mapLabels;
     this.lang = getLangFromLocalStorage();
@@ -31,29 +31,14 @@ class MapData {
   getAttributionsByLang() {
     return this.attributions[this.lang];
   }
+  getRootPath() {
+    return this.rootPath;
+  }
   getPoints() {
     return this.getFeaturesByLang(this.mapPoints);
   }
   getLabels() {
     return this.getFeaturesByLang(this.mapLabels);
-  }
-  getMapImgSrc() {
-    return this.rootPath + this.mapInfo["mapImgSrc"];
-  }
-  getResolution() {
-    return this.mapInfo["resolution"];
-  }
-  getPadding() {
-    return this.mapInfo["padding"];
-  }
-  getZoom() {
-    return this.mapInfo["zoom"];
-  }
-  getMinZoom() {
-    return this.mapInfo["minZoom"];
-  }
-  getMaxZoom() {
-    return this.mapInfo["maxZoom"];
   }
   getMapTags() {
     const tags = [];

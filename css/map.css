@@ -25,7 +25,6 @@
 
 .popover-body {
   padding: 0;
-  width: 400px;
   color: white;
 }
 
@@ -35,6 +34,10 @@
   color: var(--text-color);
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.popup-info-card {
+  width: 375px;
 }
 
 .popover {

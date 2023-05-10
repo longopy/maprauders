@@ -3,6 +3,9 @@ import "../dist/bootstrap/bootstrap.min.css";
 import "../css/main.css";
 import "../css/menu.css";
 
+// Font
+import "../dist/fonts/montserrat/font.css";
+
 // Bootstrap
 import * as bootstrap from "bootstrap";
 

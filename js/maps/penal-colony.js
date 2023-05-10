@@ -17,7 +17,3 @@ const mapRootPath = mapData.getRootPath();
 const mapPoints = mapData.getPoints();
 const mapLabels = mapData.getLabels();
 const mapConfig = new MapConfig(mapInfo, mapData.rootPath, mapPoints, mapLabels);
-
-// Attributions
-import "../../js/attributions";
-const attributionsData = new AttributionsData()

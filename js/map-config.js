@@ -1,7 +1,5 @@
 // Styles
-import "../dist/bootstrap/bootstrap.min.css";
 import "../css/back.css";
-import "../css/main.css";
 import "../css/map.css";
 import "../css/modal-img.css";
 import "../dist/ol/ol.css";
@@ -10,7 +8,7 @@ import "../dist/ol/ol.css";
 import "elm-pep";
 
 // Bootstrap
-import * as bootstrap from "bootstrap";
+import { Popover } from "bootstrap";
 
 // Modal Image
 import ModalImg from "./modal-img.js";
@@ -30,19 +28,17 @@ import { composeCssTransform, rotate } from "ol/transform.js";
 import { transform } from "ol/proj";
 
 export default class MapConfig {
-  constructor(
-    mapInfo, rootPath, mapPoints, mapLabels
-  ) {
+  constructor(mapInfo, rootPath, mapPoints, mapLabels) {
     this.config = mapInfo;
     this.rootPath = rootPath;
     this.points = mapPoints;
     this.labels = mapLabels;
-    this.mapImgSrc = mapInfo['mapImgSrc'];
-    this.padding = mapInfo['padding'];
-    this.zoom = mapInfo['zoom'];
-    this.minZoom = mapInfo['minZoom'];
-    this.maxZoom = mapInfo['maxZoom'];
-    this.resolution = mapInfo['resolution'];
+    this.mapImgSrc = mapInfo["mapImgSrc"];
+    this.padding = mapInfo["padding"];
+    this.zoom = mapInfo["zoom"];
+    this.minZoom = mapInfo["minZoom"];
+    this.maxZoom = mapInfo["maxZoom"];
+    this.resolution = mapInfo["resolution"];
     this.extent = [0, 0];
     this.extent = this.extent.concat(this.resolution); // Pixels
     this.projection = "EPSG:4326";
@@ -253,7 +249,7 @@ export default class MapConfig {
   createPopupName(feature) {
     this.popupName.setPosition(feature.getGeometry().getCoordinates());
     const popupContainer = document.getElementById("popup-name");
-    this.popoverName = new bootstrap.Popover(popupContainer, {
+    this.popoverName = new Popover(popupContainer, {
       container: "body",
       animation: false,
       html: true,
@@ -265,7 +261,7 @@ export default class MapConfig {
   createPopupInfo(feature) {
     this.popupInfo.setPosition(feature.getGeometry().getCoordinates());
     const popupContainer = document.getElementById("popup-info");
-    this.popoverInfo = new bootstrap.Popover(popupContainer, {
+    this.popoverInfo = new Popover(popupContainer, {
       container: "body",
       animation: true,
       placement: "bottom",
@@ -304,7 +300,9 @@ export default class MapConfig {
     const popoverInfoClose = document.getElementById("popover-info-close");
     this.handlePopoverClick = this.handlePopoverClick.bind(this);
     popoverInfoClose.addEventListener("click", this.handlePopoverClick);
-    this.modalImg = new ModalImg(`${this.rootPath}images/${feature.get("imgSrc")}`);
+    this.modalImg = new ModalImg(
+      `${this.rootPath}images/${feature.get("imgSrc")}`
+    );
     this.modalImg.prepareModal();
   }
   handlePopoverClick(e) {
@@ -320,7 +318,7 @@ export default class MapConfig {
     }
   }
   copy_coordinates_to_clipboard(coords) {
-    if(localStorage.getItem("edit_mode") == "true")
+    if (localStorage.getItem("edit_mode") == "true")
       navigator.clipboard.writeText(coords);
   }
   handleMapClick(e) {

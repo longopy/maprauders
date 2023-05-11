@@ -2,8 +2,8 @@
   position: absolute;
   background-color: var(--background-color);
   z-index: 9999;
-  top: 100px;
-  left: 18px;
+  top: 18px;
+  left: 95px;
 }
 
 #tag-selector {
@@ -11,7 +11,7 @@
   position: absolute;
   background-color: var(--background-color);
   z-index: 9999;
-  top: 180px;
+  top: 95px;
   left: 18px;
   max-width: 510px;
   animation: fadeIn 0.2s linear;

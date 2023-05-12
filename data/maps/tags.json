@@ -1,6 +1,7 @@
 [
   {
     "id": "loot",
+    "grouped": true,
     "iconName": "loot.svg",
     "name": {
       "en": "Loot",
@@ -92,6 +93,7 @@
   },
   {
     "id": "extraction",
+    "grouped": true,
     "iconName": "extraction.svg",
     "name": {
       "en": "Extraction",
@@ -119,6 +121,7 @@
   },
   {
     "id": "mission",
+    "grouped": true,
     "iconName": "mission.svg",
     "name": {
       "en": "Mission",
@@ -146,6 +149,7 @@
   },
   {
     "id": "enemy",
+    "grouped": true,
     "iconName": "enemy.svg",
     "name": {
       "en": "Enemy",
@@ -164,6 +168,66 @@
       {
         "id": "breach_pod",
         "iconName": "breach_pod.svg",
+        "name": {
+          "en": "Breach pod",
+          "es": "Cápsula enemiga"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ship",
+    "grouped": false,
+    "children": [
+      {
+        "id": "rubber",
+        "iconName": "rubber.svg",
+        "color": "#BE4994",
+        "name": {
+          "en": "Rubber",
+          "es": "Timón"
+        }
+      },
+      {
+        "id": "viewfinder",
+        "iconName": "viewfinder.svg",
+        "color": "#8c8c8c",
+        "name": {
+          "en": "Viewfinder",
+          "es": "Visor"
+        }
+      },
+      {
+        "id": "turret",
+        "iconName": "turret.svg",
+        "color": "#d17e46",
+        "name": {
+          "en": "Turret",
+          "es": "Torreta"
+        }
+      },
+      {
+        "id": "fire_extinguiser",
+        "iconName": "fire_extinguiser.svg",
+        "name": {
+          "en": "Fire Extinguiser",
+          "es": "Extintor"
+        },
+        "color": "#5DB670"
+      },
+      {
+        "id": "salvage_door",
+        "iconName": "salvage_door.svg",
+        "name": {
+          "en": "Salvage door",
+          "es": "Puerta de salvamento"
+        },
+        "color": "#3e92d0"
+      },
+      {
+        "id": "breach_pod_ship",
+        "iconName": "breach_pod.svg",
+        "color": "#d43c3c",
         "name": {
           "en": "Breach pod",
           "es": "Cápsula enemiga"

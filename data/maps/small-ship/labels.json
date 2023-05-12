@@ -1,0 +1,26 @@
+[
+  {
+    "name": {
+      "en": "Level 1",
+      "es": "Nivel 1"
+    },
+    "size": 18,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [-58.0078125,-1.915552304978391]
+  },
+  {
+    "name": {
+      "en": "Level 0",
+      "es": "Nivel 0"
+    },
+    "size": 18,
+    "fillColor": "#fff",
+    "outlineColor": "#000",
+    "outlineWidth": 4,
+    "rotation": 0,
+    "position": [44.296875, -1.915552304978391]
+  }
+]

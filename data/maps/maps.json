@@ -20,5 +20,27 @@
       "en": "A self sufficient labour prison facility, a fortress filled with the most dangerous criminals in the galaxy.",
       "es": "Una prisión de trabajo autosuficiente, una fortaleza llena de los criminales más peligrosos de la galaxia."
     }
+  },
+  {
+    "id": "small-ship",
+    "name": {
+      "en": "Small ship",
+      "es": "Nave pequeña"
+    },
+    "alias": {
+      "en": "Rust bucket / Scout ship",
+      "es": "Tartana / Exploradora"
+    },
+    "cardImgSrc": "cardImg.jpg",
+    "mapImgSrc": "mapImg.svg",
+    "resolution": [2700, 1000],
+    "padding": "40px 600px 0px 600px",
+    "zoom": 1,
+    "minZoom": 1,
+    "maxZoom": 7,
+    "description": {
+      "en": "Interior of the small ships in the game.",
+      "es": "Interior de las naves pequeñas del juego."
+    }
   }
 ]

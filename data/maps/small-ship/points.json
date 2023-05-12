@@ -1,0 +1,182 @@
+[
+  {
+    "name": {
+      "en": "Fire extinguiser",
+      "es": "Extintor"
+    },
+    "iconName": "fire_extinguiser.svg",
+    "category": "ship",
+    "tag": "fire_extinguiser",
+    "position": [-35.083461031921736,30.330774798468816]
+  },
+  {
+    "name": {
+      "en": "Fire extinguiser",
+      "es": "Extintor"
+    },
+    "iconName": "fire_extinguiser.svg",
+    "category": "ship",
+    "tag": "fire_extinguiser",
+    "position": [67.3635360404262,34.71698327680723]
+  },
+  {
+    "name": {
+      "en": "Fire extinguiser",
+      "es": "Extintor"
+    },
+    "iconName": "fire_extinguiser.svg",
+    "category": "ship",
+    "tag": "fire_extinguiser",
+    "position": [29.298779330882784,39.45929066188854]
+  },
+  {
+    "name": {
+      "en": "Fire extinguiser",
+      "es": "Extintor"
+    },
+    "iconName": "fire_extinguiser.svg",
+    "category": "ship",
+    "tag": "fire_extinguiser",
+    "position": [29.320299096053226,30.94893263442497]
+  },
+  {
+    "name": {
+      "en": "Salvage door",
+      "es": "Puerta de salvamento"
+    },
+    "iconName": "salvage_door.svg",
+    "category": "ship",
+    "tag": "salvage_door",
+    "position": [-33.420602213637686,35.34346095990779]
+  },
+  {
+    "name": {
+      "en": "Breach pod",
+      "es": "Cápsula enemiga"
+    },
+    "iconName": "breach_pod.svg",
+    "category": "ship",
+    "tag": "breach_pod_ship",
+    "position": [28.88939547550909,58.97578101735912]
+  },
+  {
+    "name": {
+      "en": "Breach pod",
+      "es": "Cápsula enemiga"
+    },
+    "iconName": "breach_pod.svg",
+    "category": "ship",
+    "tag": "breach_pod_ship",
+    "position": [28.76728501001414,10.667651866076014]
+  },
+  {
+    "name": {
+      "en": "Breach pod",
+      "es": "Cápsula enemiga"
+    },
+    "iconName": "breach_pod.svg",
+    "category": "ship",
+    "tag": "breach_pod_ship",
+    "position": [80.62052728902273,56.04024861869411]
+  },
+  {
+    "name": {
+      "en": "Breach pod",
+      "es": "Cápsula enemiga"
+    },
+    "iconName": "breach_pod.svg",
+    "category": "ship",
+    "tag": "breach_pod_ship",
+    "position": [80.42621943736115,13.048468007519958]
+  },
+  {
+    "name": {
+      "en": "Turret",
+      "es": "Torreta"
+    },
+    "iconName": "turret.svg",
+    "category": "ship",
+    "tag": "turret",
+    "position": [-85.82530035656252,35.47448310356316]
+  },
+  {
+    "name": {
+      "en": "Rubber",
+      "es": "Timón"
+    },
+    "iconName": "rubber.svg",
+    "category": "ship",
+    "tag": "rubber",
+    "position": [-93.36295393149507,35.31806113406665]
+  },
+  {
+    "name": {
+      "en": "Viewfinder",
+      "es": "Visor"
+    },
+    "iconName": "viewfinder.svg",
+    "category": "ship",
+    "tag": "viewfinder",
+    "position": [-82.50086384493667,44.44621924174096]
+  },
+  {
+    "name": {
+      "en": "Viewfinder",
+      "es": "Visor"
+    },
+    "iconName": "viewfinder.svg",
+    "category": "ship",
+    "tag": "viewfinder",
+    "position": [-82.6422455415673,25.81075815480693]
+  },
+  {
+    "name": {
+      "en": "Escape pod",
+      "es": "Cápsula de escape"
+    },
+    "iconName": "escape_pod.svg",
+    "category": "extraction",
+    "tag": "escape_pod",
+    "position": [57.37918134514186,53.04143889539023]
+  },
+  {
+    "name": {
+      "en": "Escape pod",
+      "es": "Cápsula de escape"
+    },
+    "iconName": "escape_pod.svg",
+    "category": "extraction",
+    "tag": "escape_pod",
+    "position": [65.13604430217629,53.0191415218266]
+  },
+  {
+    "name": {
+      "en": "Escape pod",
+      "es": "Cápsula de escape"
+    },
+    "iconName": "escape_pod.svg",
+    "category": "extraction",
+    "tag": "escape_pod",
+    "position": [57.08827837401682,17.217096547643514]
+  },
+  {
+    "name": {
+      "en": "Escape pod",
+      "es": "Cápsula de escape"
+    },
+    "iconName": "escape_pod.svg",
+    "category": "extraction",
+    "tag": "escape_pod",
+    "position": [64.81459709135424,17.168816532198374]
+  },
+  {
+    "name": {
+      "en": "Airlock",
+      "es": "Exclusa de aire"
+    },
+    "iconName": "airlock.svg",
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-0.9691985903913682,35.2907356053529]
+  }
+]

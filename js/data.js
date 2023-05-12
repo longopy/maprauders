@@ -66,16 +66,25 @@ class MapData {
   generateTagSelector() {
     let selector = "";
     this.tags.forEach((tag) => {
+      if (tag['grouped'] == true) {
       selector =
         selector +
-        this.generateTagCard(
+        this.generateGroupedTagCard(
           tag,
           tag["children"].map((child) => child)
         );
+      } else {
+        selector =
+        selector +
+        this.generateUngroupedTagCard(
+          tag,
+          tag["children"].map((child) => child)
+        );
+      }
     });
     return selector;
   }
-  generateTagCard(tag, childrenTags) {
+  generateGroupedTagCard(tag, childrenTags) {
     let card = `<div style="border: 1px solid ${tag['color']}" class="mb-3 p-0 rounded">
     <div class="container-fluid p-0"><button type="button" class="btn selected btn-sm w-100 text-center tag-btn" style="border: 1px solid ${tag['color']}" value="${
       tag["id"]
@@ -92,6 +101,17 @@ class MapData {
     });
     card = card + rows.join("") + `</div></div></div></div>`;
     return card;
+  }
+
+  generateUngroupedTagCard(tag, childrenTags) {
+    const rows = childrenTags.map((child) => {
+      return `<div class="p-1 col-12 col-md-6"><button type="button" class="h-100 btn selected btn-sm w-100 text-start tag-child-btn" style="border: 1px solid ${child['color']}" value="${
+        child["id"]
+      }"><img class="me-2 tag-child-img" src="../data/icons/tags/${
+        child["iconName"]
+      }" width="25">${child["name"][this.lang]}</button></div>`;
+    });
+    return rows.join("");
   }
 }
 

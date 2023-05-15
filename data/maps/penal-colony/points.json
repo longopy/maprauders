@@ -679,5 +679,27 @@
     "category": "loot",
     "tag": "container",
     "position": [-17.884625123328572,4.274854995867592]
+  },
+  {
+    "name": {
+      "en": "Large green box",
+      "es": "Caja verde grande"
+    },
+    "iconName": "container.svg",
+    "imgSrc": "large_green_box_security_red.jpg",
+    "category": "loot",
+    "tag": "container",
+    "position": [19.067257037201433,32.37204096248071]
+  },
+  {
+    "name": {
+      "en": "Large green box",
+      "es": "Caja verde grande"
+    },
+    "iconName": "container.svg",
+    "imgSrc": "large_green_box_security2.jpg",
+    "category": "loot",
+    "tag": "container",
+    "position": [-60.759175704233016,33.5805046091757]
   }
 ]

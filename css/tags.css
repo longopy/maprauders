@@ -11,7 +11,7 @@
   position: absolute;
   background-color: var(--background-color);
   z-index: 9999;
-  top: 95px;
+  top: 85px;
   left: 18px;
   max-width: 510px;
   animation: fadeIn 0.2s linear;

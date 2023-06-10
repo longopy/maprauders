@@ -274,8 +274,10 @@ export default class MapConfig {
     const imgSrc = feature.get("imgSrc", undefined);
     const imgContainer = `<a id="modal-img-toggle" role="button">
     <img
-      class="card-img-top img-fluid w-100"
+      class="card-img-top img-fluid"
       src="${this.rootPath}images/${imgSrc}"
+      height="210.933"
+      width="375"
       alt="${feature.get("name")}"
     />
     </a>`;

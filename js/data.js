@@ -126,7 +126,7 @@ class MenuData {
         <div class="card h-100 menu-item">
           <img class="menu-img" src="./data/maps/${map["id"]}/${
         map["cardImgSrc"]
-      }" alt="${map["name"][this.lang]}">
+      }">
           <div class="card-body">
             <h4 class="card-title text-uppercase fw-ligh menu-title">${
               map["name"][this.lang]

@@ -278,7 +278,6 @@ export default class MapConfig {
       src="${this.rootPath}images/${imgSrc}"
       height="210.933"
       width="375"
-      alt="${feature.get("name")}"
     />
     </a>`;
     return (

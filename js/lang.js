@@ -9,6 +9,7 @@ function detectLanguage() {
         const browserLang = (navigator.language || navigator.userLanguage).split('-')[0];
         const lang = langs.includes(browserLang) ? browserLang : 'en';
         localStorage.setItem('lang', lang);
+        document.documentElement.setAttribute("lang", lang);
     }
 }
 
@@ -32,6 +33,7 @@ $(function (){
     $('#change-language-btn').on('click', function (e){
         e.preventDefault();
         const lang = getTheOtherOption();
+        document.documentElement.setAttribute("lang", lang);
         localStorage.setItem('lang', lang);
         window.location.reload();
     });

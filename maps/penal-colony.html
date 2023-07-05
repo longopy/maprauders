@@ -3,7 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Marauders maps">
+  <meta name="keywords" content="Marauders, map, maps">
+  <meta name="author" content="longopy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maprauders</title>
 </head>
 
@@ -11,7 +14,7 @@
   <div id="hud">
     <div id="tag-selector-div">
       <button id="tag-selector-btn" class="tag-selector-btn btn rounded hud-btn">
-        <img class="logo" src="../data/icons/tags.svg" width="20" height="20" />
+        <img class="logo" src="../data/icons/tags.svg" width="20" height="20" alt="tags icon"/>
       </button>
       <div id="tag-selector" class="tag-selector rounded">
         <div id="tag-selector-content" class="row p-3">
@@ -21,7 +24,7 @@
     <div id="lang-div" class="dropdown lang-div rounded">
       <div class="btn-group dropdown-center dropend">
         <button class="btn lang-btn rounded" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="../data/icons/language.svg" width="30" height="24" />
+          <img src="../data/icons/language.svg" width="30" height="24" alt="language icon"/>
         </button>
         <div class="dropdown-menu dropdown-menu-wide p-1">
           <button class="dropdown-item rounded" href="#" id="change-language-btn">
@@ -32,18 +35,18 @@
     </div>
     <div id="back-div">
       <button id="back-btn" onclick="window.location.href='./../index.html'" class="back-btn btn rounded hud-btn">
-        <img class="logo" src="../data/icons/back.svg" width="20" height="20" />
+        <img class="logo" src="../data/icons/back.svg" width="20" height="20" alt="back icon"/>
       </button>
     </div>
     <div id="attributions-div" class="rounded">
       <button id="attributions-btn" class="btn rounded hud-btn">
-        <img class="logo" src="../data/icons/info.svg" width="20" height="20" />
+        <img class="logo" src="../data/icons/info.svg" width="20" height="20" alt="information icon"/>
       </button>
       <div id="attributions-info" class="rounded hud-btn">
       </div>
     </div>
     <div id="map-logo">
-      <img src="../data/logos/maprauders.svg" alt="MAPRAUDERS" height="48" />
+      <img src="../data/logos/maprauders.svg" alt="MAPRAUDERS" height="48" width="288" alt="Maprauders logo"/>
     </div>
   </div>
   <div id="map" class="map"></div>
@@ -51,7 +54,7 @@
   <div id="popup-info" class="popup-info"></div>
   <div id="modal-img" class="modal modal-img">
     <span id="modal-img-close" class="modal-img-close close" data-dismiss="modal" role="button">&times;</span>
-    <img class="modal-content modal-img-fs img-fluid" id="modal-img-fs" />
+    <img class="modal-content modal-img-fs img-fluid" id="modal-img-fs" alt="popup image"/>
   </div>
   <script type="module" src="../js/main.js"></script>
   <script type="module" src="../js/lang.js"></script>

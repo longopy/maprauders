@@ -81,14 +81,14 @@ class MapData {
       tag["id"]
     }"><img class="me-2 tag-img" src="../data/icons/tags/${
       tag["iconName"]
-    }" width="25">${tag["name"][this.lang]}</button></th>
+    }" alt="${tag["name"][this.lang]}" width="25">${tag["name"][this.lang]}</button></th>
      </div><div class="p-1 row m-2">`;
     const rows = childrenTags.map((child) => {
       return `<div class="p-1 col-12 col-md-6"><button type="button" class="h-100 btn selected btn-sm w-100 text-start tag-child-btn" value="${
         child["id"]
       }"><img class="me-2 tag-child-img" src="../data/icons/tags/${
         child["iconName"]
-      }" width="25">${child["name"][this.lang]}</button></div>`;
+      }" alt="${child["name"][this.lang]}" width="25">${child["name"][this.lang]}</button></div>`;
     });
     card = card + rows.join("") + `</div></div></div></div>`;
     return card;
@@ -126,7 +126,7 @@ class MenuData {
         <div class="card h-100 menu-item">
           <img class="menu-img" src="./data/maps/${map["id"]}/${
         map["cardImgSrc"]
-      }">
+      }" alt="${map["name"][this.lang]}">
           <div class="card-body">
             <h4 class="card-title text-uppercase fw-ligh menu-title">${
               map["name"][this.lang]

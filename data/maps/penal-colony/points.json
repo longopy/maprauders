@@ -701,5 +701,35 @@
     "category": "loot",
     "tag": "container",
     "position": [-60.759175704233016,33.5805046091757]
+  },
+  {
+    "name": {
+      "en": "Airlock GYM - 4D",
+      "es": "Exclusa GYM - 4D"
+    },
+    "imgSrc": "airlock_gym_4d.png",
+    "iconName": "airlock.svg",
+    "description": {
+      "en": "The <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>airlock</a> allows you to escape from the map by using your personal ship. Remember to carry with you the correct <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>Cpt. keycard</a>.",
+      "es": "La <a target='_blank' href='https://marauders.fandom.com/wiki/Airlock'>exclusa de aire</a> permite escapar del mapa haciendo uso de la nave personal. Recuerda llevar contigo la <a target='_blank' href='https://marauders.fandom.com/wiki/Cpt._Keycard'>tarjeta de capitán</a> correcta."
+    },
+    "category": "extraction",
+    "tag": "airlock",
+    "position": [-20.02247058579168, 74.00713406878067]
+  },
+  {
+    "name": {
+      "en": "Safe Room Switch 1",
+      "es": "Interruptor de habitación segura 1"
+    },
+    "imgSrc": "safe_room_switch1.jpg",
+    "iconName": "faction_mission.svg",
+    "description": {
+      "en": "One of four switches needed to unleash the <a target='_blank' href='https://marauders.fandom.com/wiki/Warden'>Warden</a>.",
+      "es": "Uno de los cuatro interruptores necesarios para liberar al <a target='_blank' href='https://marauders.fandom.com/wiki/Warden'>Warden</a>."
+    },
+    "category": "mission",
+    "tag": "faction_mission",
+    "position": [-57.53733863106257,34.67444926940943]
   }
 ]
